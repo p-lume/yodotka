@@ -2,77 +2,69 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Soins Bien‑Être – Shiatsu, Kobido, Yoga</title>
+    <title>Shiatsu – Ginkgo Zen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- NAVIGATION -->
-    <nav>
+    <nav class="navbar">
+        <div class="logo">GINKGO<span>ZEN</span></div>
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="shiatsu.html">Shiatsu</a></li>
+            <li><a href="shiatsu.html" class="active">Shiatsu</a></li>
             <li><a href="kobido.html">Kobido</a></li>
             <li><a href="yoga.html">Yoga</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="rdv.html">Prendre RDV</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content fade-up">
+            <h1>Shiatsu</h1>
+            <p>Une pratique japonaise pour rééquilibrer le corps et apaiser l’esprit.</p>
+        </div>
 
-        <!-- SECTION PRINCIPALE -->
-        <main>
-            <h1>Bienvenue</h1>
-            <p class="intro">
-                Découvrez les bienfaits du shiatsu, du kobido et du yoga : des pratiques
-                inspirées des traditions orientales pour retrouver énergie, équilibre et
-                détente profonde.
-            </p>
+        <img src="img/ginkgo.svg" class="ginkgo g1">
+        <img src="img/ginkgo.svg" class="ginkgo g2">
+    </header>
 
-            <div class="soins">
+    <!-- CONTENU -->
+    <section class="fade-up">
+        <h2>Qu’est‑ce que le Shiatsu ?</h2>
+        <p style="max-width:800px;margin:auto;text-align:center;">
+            Le shiatsu est une méthode japonaise qui utilise pressions, étirements et mobilisations
+            pour rétablir la circulation de l’énergie vitale. Il favorise détente, équilibre et
+            bien‑être global.
+        </p>
+    </section>
 
-                <!-- SHIATSU -->
-                <div class="soin-card">
-                    <img src="https://source.unsplash.com/400x300/?shiatsu,massage" alt="Shiatsu">
-                    <h2>Shiatsu</h2>
-                    <p>Un soin japonais basé sur les pressions, étirements et mobilisations pour harmoniser l’énergie du corps.</p>
-                    <a href="shiatsu.html" class="btn">En savoir plus</a>
+    <!-- CARROUSEL -->
+    <section class="fade-up">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="https://us.123rf.com/450wm/microgen/microgen2109/microgen210900074/175397865-woman-enjoying-shiatsu-back-massage-lying-on-the-shiatsu-massage-mat.jpg">
                 </div>
 
-                <!-- KOBIDO -->
-                <div class="soin-card">
-                    <img src="https://source.unsplash.com/400x300/?face,massage,japanese" alt="Kobido">
-                    <h2>Kobido</h2>
-                    <p>Un massage facial ancestral aux effets liftants et relaxants, pour un éclat immédiat et durable.</p>
-                    <a href="kobido.html" class="btn">En savoir plus</a>
+                <div class="carousel-slide">
+                    <img src="https://st5.depositphotos.com/65852596/75847/i/450/depositphotos_758474018-stock-photo-physiotherapist-massaging-male-patient-damaged.jpg">
                 </div>
 
-                <!-- YOGA -->
-                <div class="soin-card">
-                    <img src="https://source.unsplash.com/400x300/?yoga,zen" alt="Yoga">
-                    <h2>Yoga</h2>
-                    <p>Une pratique douce et consciente pour reconnecter le corps, le souffle et l’esprit.</p>
-                    <a href="yoga.html" class="btn">En savoir plus</a>
-                </div>
-
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
             </div>
-        </main>
+        </div>
+    </section>
 
-        <!-- ABOUT ME -->
-        <aside>
-            <h3>À propos</h3>
-            <p>
-                Praticienne en bien‑être formée en Australie et en Asie du Sud‑Est, 
-                j’accompagne chaque personne avec une approche holistique mêlant 
-                techniques traditionnelles et écoute du corps. Mon objectif : offrir 
-                un espace de détente, de rééquilibrage et de régénération.
-            </p>
-        </aside>
+    <footer>
+        <p>© 2026 GinkgoZen — Bien‑être & pratiques japonaises</p>
+    </footer>
 
-    </div>
-
-    <script src="script.js"></script>
+    <script src="shiatsu.js"></script>
 </body>
 </html>
+
+
