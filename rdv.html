@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prendre un rendez-vous</title>
+    <link rel="stylesheet" href="rdv.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="shiatsu.html">Shiatsu</a></li>
+            <li><a href="kobido.html">Kobido</a></li>
+            <li><a href="yoga.html">Yoga</a></li>
+            <li><a href="rdv.html" class="active">Prendre RDV</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-container fade-up">
+        <h1>Prendre un rendez-vous</h1>
+
+        <form id="rdvForm">
+
+            <label>Nom :</label>
+            <input type="text" id="nom" required>
+
+            <label>Prénom :</label>
+            <input type="text" id="prenom" required>
+
+            <label>Email :</label>
+            <input type="email" id="email" required>
+
+            <label>Date du rendez-vous :</label>
+            <input type="date" id="date" required>
+
+            <label>Créneau horaire :</label>
+            <select id="creneau" required>
+                <option value="">Sélectionnez une date d'abord</option>
+            </select>
+
+            <button type="submit" class="btn">Réserver</button>
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <script src="rdv.js"></script>
+</body>
+</html>
