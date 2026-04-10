@@ -236,5 +236,43 @@ footer {
     background: var(--light);
     color: var(--dark);
 }
+/* HERO VERSION HOME */
+.hero {
+    height: 70vh;
+    background: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+}
 
+/* TITRE HERO PLUS IMPACTANT */
+.hero h1 {
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+}
+
+/* CARDS HOVER EFFECT */
+.card {
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* IMAGE ZOOM */
+.card img {
+    transition: transform .5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* BOUTON PLUS MODERNE */
+.btn-small {
+    transition: all .3s ease;
+}
+
+.btn-small:hover {
+    background: var(--dark);
+}
 
