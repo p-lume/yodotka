@@ -2,14 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Prendre un rendez-vous</title>
-    <link rel="stylesheet" href="rdv.css">
+    <title>Prendre un rendez-vous – GinkgoZen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- NAVIGATION -->
     <nav class="navbar">
+        <div class="logo">GINKGO<span>ZEN</span></div>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="shiatsu.html">Shiatsu</a></li>
@@ -19,10 +20,21 @@
         </ul>
     </nav>
 
-    <section class="form-container fade-up">
-        <h1>Prendre un rendez-vous</h1>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content fade-up">
+            <h1>Prendre un rendez-vous</h1>
+            <p>Réservez votre séance bien‑être en quelques instants.</p>
+        </div>
 
-        <!-- FORMULAIRE AVEC ENVOI EMAIL -->
+        <img src="img/ginkgo.svg" class="ginkgo g1">
+        <img src="img/ginkgo.svg" class="ginkgo g2">
+    </header>
+
+    <!-- FORMULAIRE -->
+    <section class="intro fade-up" style="max-width:600px;">
+        <h2>Formulaire de réservation</h2>
+
         <form id="rdvForm" action="https://formsubmit.co/prunefacet@gmail.com" method="POST">
 
             <!-- Champs cachés FormSubmit -->
@@ -53,6 +65,11 @@
         <p id="message"></p>
     </section>
 
+    <footer>
+        <p>© 2026 GinkgoZen — Bien‑être & pratiques japonaises</p>
+    </footer>
+
     <script src="rdv.js"></script>
 </body>
 </html>
+
