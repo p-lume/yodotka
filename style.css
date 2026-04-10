@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    background: #f7f4ef;
+    color: #333;
+}
+
+/* NAVIGATION */
+nav {
+    background: #c9a38d;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+main {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* INTRO */
+.intro {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+/* CARDS */
+.soins {
+    display: flex;
+    gap: 20px;
+}
+
+.soin-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: floatUp 1s forwards;
+}
+
+.soin-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.soin-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.soin-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #c9a38d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ANIMATION */
+@keyframes floatUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
