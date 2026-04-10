@@ -1,5 +1,4 @@
 // Créneaux disponibles par date
-// ➜ Tu peux modifier ici pour dire ce qui est dispo ou pas
 const disponibilites = {
     "2025-02-10": ["10:00", "14:00", "16:00"],
     "2025-02-11": ["09:00", "11:00"],
@@ -35,20 +34,26 @@ dateInput.addEventListener("change", () => {
 
 // Soumission du formulaire
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const nom = document.getElementById("nom").value;
-    const prenom = document.getElementById("prenom").value;
-    const email = document.getElementById("email").value;
     const date = dateInput.value;
     const creneau = creneauSelect.value;
 
     if (!creneau) {
+        e.preventDefault();
         message.textContent = "Aucun créneau disponible pour cette date.";
         message.style.color = "red";
         return;
     }
 
-    message.textContent = `Merci ${prenom}, votre rendez-vous est réservé le ${date} à ${creneau}.`;
+    // Ajouter le créneau dans les données envoyées
+    const hidden = document.createElement("input");
+    hidden.type = "hidden";
+    hidden.name = "creneau";
+    hidden.value = creneau;
+    form.appendChild(hidden);
+
+    message.textContent = "Votre demande est envoyée...";
     message.style.color = "green";
+
+    // Le formulaire s'envoie automatiquement grâce à FormSubmit
 });
+
