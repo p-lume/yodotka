@@ -94,8 +94,6 @@ body {
 .gingko {
     position: absolute;
     width: 120px;
-    opacity: 0.08;
-    filter: blur(0.8px);
 }
 
 .g1 { top: 10%; left: 5%; transform: rotate(-20deg); }
