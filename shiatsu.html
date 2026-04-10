@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>GinkgoZen – Bien‑Être Japonais</title>
+    <title>Shiatsu – GinkgoZen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,8 +12,8 @@
     <nav class="navbar">
         <div class="logo">GINKGO<span>ZEN</span></div>
         <ul>
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="shiatsu.html">Shiatsu</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="shiatsu.html" class="active">Shiatsu</a></li>
             <li><a href="kobido.html">Kobido</a></li>
             <li><a href="yoga.html">Yoga</a></li>
             <li><a href="rdv.html">Prendre RDV</a></li>
@@ -23,94 +23,61 @@
     <!-- HERO -->
     <header class="hero">
         <div class="hero-content fade-up">
-            <h1>Découvrez les bienfaits du shiatsu</h1>
-            <p>Pratiques corporelles de bien‑être inspirées de la tradition orientale.</p>
+            <h1>Shiatsu</h1>
+            <p>Un soin japonais pour rééquilibrer le corps et apaiser l’esprit.</p>
         </div>
 
         <img src="img/ginkgo.svg" class="ginkgo g1">
         <img src="img/ginkgo.svg" class="ginkgo g2">
     </header>
 
-    <!-- INTRO TEXTE -->
+    <!-- DESCRIPTION -->
     <section class="intro fade-up">
+        <h2>Qu’est‑ce que le Shiatsu ?</h2>
+
         <p>
-            Besoin de soins à la carte ? Douleurs chroniques ? Anxiété ? Fatigue ? Convalescence ?
-            Entraînement physique intensif ? Traits tirés ?  
-            Offrez-vous un moment de détente, une séance personnalisée adaptée à vos attentes.
+            Le shiatsu est une méthode japonaise basée sur des pressions, étirements et mobilisations
+            visant à rétablir la circulation de l’énergie vitale. Il favorise détente, équilibre et
+            bien‑être global.
         </p>
 
         <p>
-            Retrouvez énergie, vitalité, équilibre, mobilité et confort corporel dans l’art pur et
-            traditionnel de deux pratiques japonaises.
-        </p>
-
-        <p>
-            La séance de shiatsu se déroule habillé, sur futon, dans une écoute attentive du corps.
-            Elle ne se substitue pas à un traitement médical mais, en complément et en préventif,
-            c’est un soin bien‑être rééquilibrant qui harmonise l’énergie du corps. Adapté à tous les âges.
-        </p>
-
-        <p>
-            La séance de Kobido se déroule sur table : elle retend les traits, dénoue les tensions
-            du visage et du cou. C’est un soin détente/beauté aux effets lissants et liftants
-            immédiats et durables.
-        </p>
-
-        <p>
-            Cliquez sur les onglets du bandeau ci‑dessus pour découvrir les prestations.
+            La séance se déroule habillé, sur futon, dans une écoute attentive du corps.  
+            En complément d’un suivi médical ou en préventif, le shiatsu harmonise l’énergie du corps
+            et convient à tous les âges.
         </p>
     </section>
 
-    <!-- CARTES SOINS -->
-    <section class="soins">
-        <h2>Nos pratiques</h2>
+    <!-- CARROUSEL -->
+    <section class="fade-up">
+        <div class="carousel">
+            <div class="carousel-container">
 
-        <div class="cards">
+                <div class="carousel-slide active">
+                    <img src="https://source.unsplash.com/900x600/?shiatsu,massage" alt="Shiatsu 1">
+                </div>
 
-            <div class="card fade-delay-1">
-                <img src="https://source.unsplash.com/400x300/?shiatsu,japan" alt="Shiatsu">
-                <h3>Shiatsu</h3>
-                <p>Pressions et étirements pour harmoniser l’énergie du corps.</p>
-                <a href="shiatsu.html" class="btn-small">Découvrir</a>
+                <div class="carousel-slide">
+                    <img src="https://source.unsplash.com/900x600/?japanese,therapy" alt="Shiatsu 2">
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="https://source.unsplash.com/900x600/?wellness,relax" alt="Shiatsu 3">
+                </div>
+
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+
             </div>
-
-            <div class="card fade-delay-2">
-                <img src="https://source.unsplash.com/400x300/?kobido,face" alt="Kobido">
-                <h3>Kobido</h3>
-                <p>Massage facial japonais aux effets liftants et relaxants.</p>
-                <a href="kobido.html" class="btn-small">Découvrir</a>
-            </div>
-
-            <div class="card fade-delay-3">
-                <img src="https://source.unsplash.com/400x300/?yoga,zen" alt="Yoga">
-                <h3>Yoga</h3>
-                <p>Une pratique douce pour reconnecter corps et esprit.</p>
-                <a href="yoga.html" class="btn-small">Découvrir</a>
-            </div>
-
         </div>
-    </section>
-
-    <!-- ACTUALITÉS -->
-    <section class="intro fade-up">
-        <h2>Dernières actualités</h2>
-        <p>
-            Praticienne shiatsu et kobido, plus de dix ans d’expérience.  
-            Nouveau dans l’Essonne, unique sur Boutigny : une expérience bien‑être régénérante dans
-            une atmosphère confortable, à travers des pratiques naturelles ancestrales.
-        </p>
-        <p>
-            Praticienne certifiée en massage fonctionnel, équilibrage structurel, shiatsu, kobido,
-            réflexologie et naturopathie. Diplômes universitaires.  
-            Formée en France, au Japon, en Thaïlande et en Australie.  
-            Praticienne du monde.
-        </p>
     </section>
 
     <footer>
         <p>© 2026 GinkgoZen — Bien‑être & pratiques japonaises</p>
     </footer>
 
+    <script src="shiatsu.js"></script>
 </body>
 </html>
+
 
