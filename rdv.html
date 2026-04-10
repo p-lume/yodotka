@@ -8,6 +8,7 @@
 
 <body>
 
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -21,22 +22,28 @@
     <section class="form-container fade-up">
         <h1>Prendre un rendez-vous</h1>
 
-        <form id="rdvForm">
+        <!-- FORMULAIRE AVEC ENVOI EMAIL -->
+        <form id="rdvForm" action="https://formsubmit.co/prunefacet@gmail.com" method="POST">
+
+            <!-- Champs cachés FormSubmit -->
+            <input type="hidden" name="_subject" value="Nouveau rendez-vous depuis le site">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
             <label>Nom :</label>
-            <input type="text" id="nom" required>
+            <input type="text" name="nom" id="nom" required>
 
             <label>Prénom :</label>
-            <input type="text" id="prenom" required>
+            <input type="text" name="prenom" id="prenom" required>
 
             <label>Email :</label>
-            <input type="email" id="email" required>
+            <input type="email" name="email" id="email" required>
 
             <label>Date du rendez-vous :</label>
-            <input type="date" id="date" required>
+            <input type="date" name="date" id="date" required>
 
             <label>Créneau horaire :</label>
-            <select id="creneau" required>
+            <select name="creneau" id="creneau" required>
                 <option value="">Sélectionnez une date d'abord</option>
             </select>
 
