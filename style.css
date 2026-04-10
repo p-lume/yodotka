@@ -1,8 +1,9 @@
-/* PALETTE */
+/* PALETTE ZEN CHAUDE */
 :root {
-    --beige: #f7f4ef;
-    --gold: #c9a86a;
-    --dark: #2e2a27;
+    --beige: #f7f2eb;
+    --gold: #d4a86a;
+    --terracotta: #d97a4f;
+    --dark: #3a2f2a;
     --light: #ffffff;
     --shadow: rgba(0,0,0,0.08);
 }
@@ -31,10 +32,11 @@ body {
     font-size: 1.6rem;
     font-weight: bold;
     letter-spacing: 2px;
+    color: var(--dark);
 }
 
 .logo span {
-    color: var(--gold);
+    color: var(--terracotta);
 }
 
 .navbar ul {
@@ -51,7 +53,7 @@ body {
 
 .navbar a.active,
 .navbar a:hover {
-    color: var(--gold);
+    color: var(--terracotta);
 }
 
 /* HERO */
@@ -73,15 +75,16 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
+    color: var(--terracotta);
 }
 
 .btn {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 25px;
-    background: var(--gold);
+    background: var(--terracotta);
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -111,10 +114,10 @@ h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 40px;
-    color: var(--gold);
+    color: var(--terracotta);
 }
 
-/* CARTES */
+/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -143,6 +146,7 @@ h2 {
 
 .card h3 {
     padding: 15px 20px 0;
+    color: var(--terracotta);
 }
 
 .card p {
@@ -153,11 +157,63 @@ h2 {
     display: inline-block;
     margin: 15px 20px;
     padding: 8px 16px;
-    background: var(--gold);
+    background: var(--terracotta);
     color: white;
     border-radius: 6px;
     text-decoration: none;
 }
+
+/* CARROUSEL */
+.carousel {
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background .3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
 
 /* ANIMATIONS */
 .fade-up {
