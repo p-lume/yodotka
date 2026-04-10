@@ -93,9 +93,8 @@ body {
 /* GINGKO DECOR */
 .gingko {
     position: absolute;
-    width: 220px;
+    width: 120px;
     opacity: 0.08;
-    pointer-events: none;
     filter: blur(0.8px);
 }
 
