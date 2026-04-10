@@ -93,8 +93,10 @@ body {
 /* GINKGO DECOR */
 .ginkgo {
     position: absolute;
-    width: 180px;
-    opacity: 0.25;
+    width: 220px;
+    opacity: 0.08;
+    pointer-events: none;
+    filter: blur(0.8px);
 }
 
 .g1 { top: 10%; left: 5%; transform: rotate(-20deg); }
