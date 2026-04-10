@@ -57,7 +57,7 @@ body {
 /* HERO */
 .hero {
     height: 60vh;
-    background: url("https://source.unsplash.com/1600x900/?zen,stones") center/cover no-repeat;
+    background: url("https://source.unsplash.com/1600x900/?zen,japan") center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     margin-bottom: 10px;
 }
 
@@ -97,11 +97,16 @@ body {
 .g1 { top: 10%; left: 5%; transform: rotate(-20deg); }
 .g2 { bottom: 5%; right: 10%; transform: rotate(15deg); }
 
-/* CONTENT */
-section {
-    padding: 60px 40px;
+/* INTRO */
+.intro {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
 
+/* TITRES */
 h2 {
     text-align: center;
     font-size: 2rem;
@@ -109,11 +114,12 @@ h2 {
     color: var(--gold);
 }
 
-/* CARDS */
+/* CARTES */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
+    padding: 0 40px;
 }
 
 .card {
@@ -121,12 +127,14 @@ h2 {
     border-radius: 12px;
     box-shadow: 0 4px 15px var(--shadow);
     padding-bottom: 20px;
-    transition: transform .3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-}
+.fade-delay-1 { animation-delay: .3s; }
+.fade-delay-2 { animation-delay: .6s; }
+.fade-delay-3 { animation-delay: .9s; }
 
 .card img {
     width: 100%;
@@ -172,4 +180,5 @@ footer {
     background: var(--light);
     color: var(--dark);
 }
+
 
