@@ -13,47 +13,45 @@
    TYPOGRAPHIE PREMIUM
 ---------------------------------- */
 
-/* Paragraphes & texte courant */
+/* ----------------------------------
+   TYPOGRAPHIE PREMIUM PLAYFAIR
+---------------------------------- */
+
+/* Texte courant */
 body, p, li, a, button {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     letter-spacing: 0.2px;
+    color: var(--dark);
 }
 
 /* Titres */
 h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 500;
     letter-spacing: 0.5px;
     color: var(--terracotta);
 }
 
-/* H1 plus doux et premium */
+/* H1 : élégant, moderne */
 h1 {
     font-size: 3.2rem;
     font-weight: 600;
+    font-style: italic; /* option premium */
 }
 
-/* H2 harmonisé */
+/* H2 : plus doux */
 h2 {
     font-size: 2.2rem;
     margin-bottom: 35px;
+    font-style: italic; /* optionnel mais très beau */
 }
 
-/* H3 pour les cartes */
+/* H3 : pour les cartes */
 h3 {
     font-size: 1.5rem;
 }
 
-
-body {
-    margin: 0;
-   font-family: 'Inter', sans-serif;
-    background: var(--beige);
-    background: var(--beige);
-    color: var(--dark);
-    line-height: 1.6;
-}
 
 /* ----------------------------------
    2. NAVBAR
