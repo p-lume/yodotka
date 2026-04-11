@@ -48,7 +48,8 @@ h3 {
 
 body {
     margin: 0;
-    font-family: "Helvetica Neue", sans-serif;
+   font-family: 'Inter', sans-serif;
+    background: var(--beige);
     background: var(--beige);
     color: var(--dark);
     line-height: 1.6;
