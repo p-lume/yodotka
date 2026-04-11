@@ -58,8 +58,8 @@ body {
 
 /* HERO */
 .hero {
-    height: 60vh;
-    background: url("https://source.unsplash.com/1600x900/?zen,japan") center/cover no-repeat;
+    height: 70vh;
+    background: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -75,19 +75,10 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
     margin-bottom: 10px;
     color: var(--terracotta);
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: var(--terracotta);
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
 }
 
 /* GINGKO DECOR */
@@ -132,11 +123,13 @@ h2 {
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 1s forwards;
+    transition: transform .4s ease, box-shadow .4s ease;
 }
 
-.fade-delay-1 { animation-delay: .3s; }
-.fade-delay-2 { animation-delay: .6s; }
-.fade-delay-3 { animation-delay: .9s; }
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
 .card img {
     width: 100%;
@@ -144,6 +137,10 @@ h2 {
     object-fit: cover;
     border-radius: 12px 12px 0 0;
     transition: transform .5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
 }
 
 .card h3 {
@@ -163,65 +160,22 @@ h2 {
     color: white;
     border-radius: 6px;
     text-decoration: none;
+    transition: all .3s ease;
 }
 
-/* CARROUSEL */
-.carousel {
-    margin: 50px auto;
-    max-width: 900px;
+.btn-small:hover {
+    background: var(--dark);
 }
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-.carousel-slide {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-    position: relative;
-}
-
-.carousel-slide img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
-    color: white;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-    transition: background .3s;
-}
-
-.carousel-btn:hover {
-    background: rgba(0,0,0,0.7);
-}
-
-.carousel-btn.prev { left: 15px; }
-.carousel-btn.next { right: 15px; }
 
 /* ANIMATIONS */
 .fade-up {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeUp 1s forwards;
+}
+
+.appear {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 @keyframes fadeUp {
@@ -231,52 +185,6 @@ h2 {
     }
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--light);
-    color: var(--dark);
-}
-/* HERO VERSION HOME */
-.hero {
-    height: 70vh;
-    background: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-}
-
-/* TITRE HERO PLUS IMPACTANT */
-.hero h1 {
-    font-size: 3.2rem;
-    letter-spacing: 1px;
-}
-
-/* CARDS HOVER EFFECT */
-.card {
-    transition: transform .4s ease, box-shadow .4s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* IMAGE ZOOM */
-.card img {
-    transition: transform .5s ease;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-/* BOUTON PLUS MODERNE */
-.btn-small {
-    transition: all .3s ease;
-}
-
-.btn-small:hover {
-    background: var(--dark);
-}
 /* ABOUT HERO */
 .about-hero {
     height: 50vh;
@@ -299,7 +207,6 @@ footer {
     transition: transform .4s ease, box-shadow .4s ease;
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeUp 1s forwards;
 }
 
 .dip-card:hover {
@@ -312,64 +219,50 @@ footer {
     color: var(--terracotta);
     font-size: 1.2rem;
 }
-.appear {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+
+/* SIDEBAR LAYOUT */
+.home-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 50px;
+    padding: 40px;
+    align-items: start;
 }
 
-.story {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 100px;
 }
 
-.story p {
-    line-height: 1.8;
-    font-size: 1.05rem;
-    color: var(--dark);
+.mini-bio, .insta-box {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
-/* TEXTE CACHE */
-.story-more {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s ease, opacity 0.6s ease;
-    opacity: 0;
-}
-
-/* TEXTE OUVERT */
-.story.open .story-more {
-    max-height: 1000px;
-    opacity: 1;
-    margin-top: 15px;
-}
-
-/* BOUTON */
-.btn-toggle {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background: transparent;
+.mini-bio h3, .insta-box h3 {
     color: var(--terracotta);
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
+    margin-bottom: 10px;
 }
 
-/* PETITE LIGNE ANIMEE */
-.btn-toggle::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--terracotta);
-    transition: width 0.3s;
-    margin: auto;
+/* INSTAGRAM GRID */
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
 }
 
-.btn-toggle:hover::after {
+.insta-grid img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
 }
+
 /* FOOTER PRO */
 .footer {
     background: var(--light);
@@ -421,51 +314,14 @@ footer {
     font-size: 0.9rem;
     color: var(--dark);
 }
-/* LAYOUT AVEC SIDEBAR */
-.home-layout {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 40px;
-    padding: 40px;
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.mini-bio, .insta-box {
-    background: var(--light);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-.mini-bio h3, .insta-box h3 {
-    color: var(--terracotta);
-    margin-bottom: 10px;
-}
-
-/* GRID INSTAGRAM */
-.insta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-}
-
-.insta-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
-}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .home-layout {
         grid-template-columns: 1fr;
     }
+
+    .sidebar {
+        position: static;
+    }
 }
-
-
