@@ -317,4 +317,57 @@ footer {
     transform: translateY(0) !important;
 }
 
+.story {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.story p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--dark);
+}
+
+/* TEXTE CACHE */
+.story-more {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+}
+
+/* TEXTE OUVERT */
+.story.open .story-more {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+/* BOUTON */
+.btn-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: var(--terracotta);
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+/* PETITE LIGNE ANIMEE */
+.btn-toggle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--terracotta);
+    transition: width 0.3s;
+    margin: auto;
+}
+
+.btn-toggle:hover::after {
+    width: 100%;
+}
 
