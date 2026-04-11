@@ -30,3 +30,27 @@ btn.addEventListener("click", () => {
         btn.textContent = "Lire la suite";
     }
 });
+// INSTAGRAM FEED AUTO
+async function loadInstagram() {
+    const url = "https://cdn.lightwidget.com/widgets/abcd1234.json"; // remplace par ton lien JSON
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const container = document.getElementById("insta-feed");
+
+        // On affiche les 6 dernières photos
+        data.data.slice(0, 6).forEach(post => {
+            const img = document.createElement("img");
+            img.src = post.thumbnail;
+            img.alt = "Instagram photo";
+            container.appendChild(img);
+        });
+
+    } catch (error) {
+        console.log("Erreur Instagram :", error);
+    }
+}
+
+loadInstagram();
