@@ -96,7 +96,7 @@ body {
     width: 120px;
 }
 
-.g1 { top: 10%; left: 5%; transform: rotate(15deg); }
+.g1 { top: 10%; left: 5%; transform: rotate(45deg); }
 .g2 { bottom: 5%; right: 10%; transform: rotate(-15deg); }
 
 /* ----------------------------------
