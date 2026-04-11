@@ -267,3 +267,68 @@ h2 {
     border-top: 1px solid rgba(0,0,0,0.1);
 }
 
+/* MOBILE PREMIUM */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 0.95rem;
+    }
+
+    /* HERO */
+    .hero,
+    .hero-rdv,
+    .about-hero {
+        height: 40vh;
+        padding: 0 15px;
+    }
+
+    .hero-content,
+    .hero-rdv-content {
+        padding: 15px 20px;
+    }
+
+    .hero h1,
+    .hero-rdv-content h1 {
+        font-size: 2rem;
+    }
+
+    /* TITRES */
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    /* CARDS */
+    .cards {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    /* HOME LAYOUT */
+    .home-layout {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    /* ABOUT */
+    .about-intro,
+    .about-story {
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding
