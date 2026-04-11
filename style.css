@@ -8,6 +8,8 @@
     --dark: #3a2f2a;
     --light: #ffffff;
     --shadow: rgba(0,0,0,0.08);
+   background: var(--light);
+
 }
 /* ----------------------------------
    TYPOGRAPHIE PREMIUM
