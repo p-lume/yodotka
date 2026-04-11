@@ -149,19 +149,20 @@ h3 {
 
 .footer-bottom .gingko {
     position: absolute;
-    width: 60px; /* plus petit et discret */
     opacity: 0.8;
     z-index: 1;
 }
 
 .footer-bottom .g1 {
-    left: 35%;
+      width: 10px; /* plus petit et discret */
+   left: 35%;
     bottom: 0;
     transform: rotate(-25deg);
 }
 
 .footer-bottom .g2 {
-    right: 35%;
+   width: 60px; /* plus petit et discret */
+   right: 35%;
     bottom: 0;
     transform: rotate(25deg);
 }
