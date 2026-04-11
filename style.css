@@ -35,14 +35,14 @@ h1, h2, h3, h4 {
 
 /* H1 : élégant, moderne */
 h1 {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     font-weight: 600;
     font-style: italic; /* option premium */
 }
 
 /* H2 : plus doux */
 h2 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     margin-bottom: 35px;
     font-style: italic; /* optionnel mais très beau */
 }
