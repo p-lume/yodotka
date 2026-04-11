@@ -88,16 +88,25 @@ body {
     color: var(--terracotta);
 }
 
-/* ----------------------------------
-   4. GINGKO DECOR (inchangé)
 ---------------------------------- */
-.gingko {
+.footer .gingko {
     position: absolute;
-    width: 120px;
+    width: 70px; /* plus petit que 120px */
+    opacity: 0.8; /* léger pour ne pas dominer */
+    z-index: 1;
 }
 
-.g1 { top: 10%; left: 5%; transform: rotate(-45deg); }
-.g2 { bottom: 5%; right: 10%; transform: rotate(15deg); }
+.footer .g1 {
+    bottom: 20px;
+    left: 5%;
+    transform: rotate(-45deg);
+}
+
+.footer .g2 {
+    bottom: 20px;
+    right: 5%;
+    transform: rotate(15deg);
+}
 
 /* ----------------------------------
    5. INTRO
