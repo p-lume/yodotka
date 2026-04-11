@@ -154,7 +154,7 @@ h3 {
 }
 
 .footer-bottom .g1 {
-      width: 10px; /* plus petit et discret */
+      width: 0.1px; /* plus petit et discret */
    left: 35%;
     bottom: 0;
     transform: rotate(-25deg);
