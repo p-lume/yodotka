@@ -18,7 +18,19 @@ faders.forEach(fader => appearOnScroll.observe(fader));
 
 /* INSTAGRAM FEED AUTO */
 async function loadInstagram() {
-    const url = "https://cdn.lightwidget.com/widgets/abcd1234.json"; // ← remplace par ton lien JSON LightWidget
+    const container = document.getElementById("insta-feed");
+
+    container.innerHTML = `
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"><\/script>
+        <iframe 
+            src="//lightwidget.com/widgets/62cd21c222e355919f6b53587dd3651a.html"
+            scrolling="no"
+            allowtransparency="true"
+            class="lightwidget-widget"
+            style="width:100%;border:0;overflow:hidden;">
+        </iframe>
+    `;
+}
 
     try {
         const response = await fetch(url);
