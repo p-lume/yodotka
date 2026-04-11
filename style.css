@@ -88,25 +88,36 @@ body {
     color: var(--terracotta);
 }
 
----------------------------------- */
-.footer .gingko {
+/* --- Gingko autour du copyright --- */
+.footer-bottom {
+    position: relative;
+    text-align: center;
+}
+
+.footer-bottom p {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom .gingko {
     position: absolute;
-    width: 70px; /* plus petit que 120px */
-    opacity: 0.8; /* léger pour ne pas dominer */
+    width: 60px; /* plus petit et discret */
+    opacity: 0.8;
     z-index: 1;
 }
 
-.footer .g1 {
-    bottom: 20px;
-    left: 5%;
-    transform: rotate(-45deg);
+.footer-bottom .g1 {
+    left: 35%;
+    bottom: 0;
+    transform: rotate(-25deg);
 }
 
-.footer .g2 {
-    bottom: 20px;
-    right: 5%;
-    transform: rotate(15deg);
+.footer-bottom .g2 {
+    right: 35%;
+    bottom: 0;
+    transform: rotate(25deg);
 }
+
 
 /* ----------------------------------
    5. INTRO
