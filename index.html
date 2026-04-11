@@ -31,103 +31,110 @@
         <img src="img/gingko.svg" class="gingko g1">
         <img src="img/gingko.svg" class="gingko g2">
     </header>
+
+
+    <!-- LAYOUT AVEC COLONNE DROITE -->
     <section class="home-layout">
 
-    <!-- CONTENU PRINCIPAL -->
-    <div class="home-main">
-        <!-- Ton contenu existant reste ici -->
-    </div>
+        <!-- COLONNE GAUCHE : CONTENU PRINCIPAL -->
+        <div class="home-main">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+            <!-- PRESTATIONS -->
+            <section class="intro fade-up">
+                <h2>Mes prestations</h2>
+            </section>
 
-        <!-- MINI BIO -->
-        <div class="mini-bio fade-up">
-            <h3>À propos</h3>
-            <p>
-                Praticienne shiatsu, kobido et yoga, formée en France, au Japon, en Thaïlande et en Australie.
-                Plus de dix ans d’expérience au service du bien‑être.
-            </p>
-            <a href="aboutme.html" class="btn-small">En savoir plus</a>
+            <section class="cards">
+
+                <!-- SHIATSU -->
+                <div class="card fade-delay-1">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80" alt="Shiatsu">
+                    <h3>Shiatsu</h3>
+                    <p>Un soin énergétique japonais pour rééquilibrer le corps et apaiser l’esprit.</p>
+                    <a href="shiatsu.html" class="btn-small">Découvrir</a>
+                </div>
+
+                <!-- YOGA -->
+                <div class="card fade-delay-2">
+                    <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=800&q=80" alt="Yoga">
+                    <h3>Yoga</h3>
+                    <p>Reconnectez-vous à votre souffle et à votre corps à travers une pratique douce.</p>
+                    <a href="yoga.html" class="btn-small">Découvrir</a>
+                </div>
+
+                <!-- KOBIDO -->
+                <div class="card fade-delay-3">
+                    <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=800&q=80" alt="Kobido">
+                    <h3>Kobido</h3>
+                    <p>Massage facial japonais ancestral pour un effet liftant naturel.</p>
+                    <a href="kobido.html" class="btn-small">Découvrir</a>
+                </div>
+
+            </section>
+
         </div>
 
-        <!-- INSTAGRAM -->
-        <div class="insta-box fade-up">
-            <h3>Instagram</h3>
-            <div class="insta-grid" id="insta-feed">
-                <!-- Les photos seront chargées ici -->
+
+        <!-- COLONNE DROITE : SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- MINI BIO -->
+            <div class="mini-bio fade-up">
+                <h3>À propos</h3>
+                <p>
+                    Praticienne shiatsu, kobido et yoga, formée en France, au Japon, en Thaïlande et en Australie.
+                    Plus de dix ans d’expérience au service du bien‑être.
+                </p>
+                <a href="aboutme.html" class="btn-small">En savoir plus</a>
             </div>
-        </div>
 
-    </aside>
+            <!-- INSTAGRAM -->
+            <div class="insta-box fade-up">
+                <h3>Instagram</h3>
+                <div class="insta-grid" id="insta-feed"></div>
+            </div>
 
-</section>
-
-
-    <!-- PRESTATIONS -->
-    <section class="intro fade-up">
-        <h2>Mes prestations</h2>
-    </section>
-
-    <section class="cards">
-
-        <!-- SHIATSU -->
-        <div class="card fade-delay-1">
-            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80" alt="Shiatsu">
-            <h3>Shiatsu</h3>
-            <p>Un soin énergétique japonais pour rééquilibrer le corps et apaiser l’esprit.</p>
-            <a href="shiatsu.html" class="btn-small">Découvrir</a>
-        </div>
-
-        <!-- YOGA -->
-        <div class="card fade-delay-2">
-            <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=800&q=80" alt="Yoga">
-            <h3>Yoga</h3>
-            <p>Reconnectez-vous à votre souffle et à votre corps à travers une pratique douce.</p>
-            <a href="yoga.html" class="btn-small">Découvrir</a>
-        </div>
-
-        <!-- KOBIDO -->
-        <div class="card fade-delay-3">
-            <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=800&q=80" alt="Kobido">
-            <h3>Kobido</h3>
-            <p>Massage facial japonais ancestral pour un effet liftant naturel.</p>
-            <a href="kobido.html" class="btn-small">Découvrir</a>
-        </div>
+        </aside>
 
     </section>
-<footer class="footer">
-    <div class="footer-container">
 
-        <div class="footer-col">
-            <h4>YODOTKA</h4>
-            <p>Bien‑être, shiatsu, kobido, yoga et pratiques naturelles en Île‑de‑France.</p>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h4>YODOTKA</h4>
+                <p>Bien‑être, shiatsu, kobido, yoga et pratiques naturelles en Île‑de‑France.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="shiatsu.html">Shiatsu</a></li>
+                    <li><a href="kobido.html">Kobido</a></li>
+                    <li><a href="yoga.html">Yoga</a></li>
+                    <li><a href="aboutme.html">À propos</a></li>
+                    <li><a href="rdv.html">Prendre RDV</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Île‑de‑France, France</p>
+                <p>Email : <a href="mailto:contact@yodotka.com">contact@yodotka.com</a></p>
+            </div>
+
         </div>
 
-        <div class="footer-col">
-            <h4>Navigation</h4>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="shiatsu.html">Shiatsu</a></li>
-                <li><a href="kobido.html">Kobido</a></li>
-                <li><a href="yoga.html">Yoga</a></li>
-                <li><a href="aboutme.html">À propos</a></li>
-                <li><a href="rdv.html">Prendre RDV</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>© 2026 YODOTKA – Tous droits réservés</p>
         </div>
+    </footer>
 
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <p>Île‑de‑France, France</p>
-            <p>Email : <a href="mailto:contact@yodotka.com">contact@yodotka.com</a></p>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 YODOTKA – Tous droits réservés</p>
-    </div>
-</footer>
+    <script src="script.js"></script>
 
 </body>
 </html>
+
