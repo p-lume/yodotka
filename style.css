@@ -144,6 +144,7 @@ h3 {
 
 .footer-bottom p {
     position: relative;
+    width: 60px; /* plus petit et discret */
     z-index: 2;
 }
 
@@ -153,15 +154,13 @@ h3 {
     z-index: 1;
 }
 
-.footer-bottom .g1 {
-   width: 0.1px; /* plus petit et discret */
-   left: 35%;
-    bottom: 0;
-    transform: rotate(-25deg);
+.footer-col .g1 {
+    width: 28px;        /* petit et discret */
+    margin-top: 10px;   /* espace sous le texte */
+    opacity: 0.8;
 }
 
 .footer-bottom .g2 {
-   width: 60px; /* plus petit et discret */
    right: 35%;
     bottom: 0;
     transform: rotate(25deg);
