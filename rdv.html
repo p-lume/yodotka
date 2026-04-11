@@ -34,6 +34,67 @@
 
 
 <!-- SECTION RDV -->
+    <section class="resa">
+
+    <h2>Réserver un soin</h2>
+
+    <!-- CHOIX DU SOIN -->
+    <div class="service-grid">
+        <div class="service-card" data-value="kobido_30">
+            <h3>Kobido express</h3>
+            <p>30 min — 50 €</p>
+        </div>
+
+        <div class="service-card" data-value="kobido_90">
+            <h3>Kobido</h3>
+            <p>90 min — 80 €</p>
+        </div>
+
+        <div class="service-card" data-value="shiatsu_90">
+            <h3>Shiatsu</h3>
+            <p>90 min — 90 €</p>
+        </div>
+    </div>
+
+    <!-- FORMULAIRE -->
+    <form id="rdvForm" action="https://formsubmit.co/prunefacet@gmail.com" method="POST">
+
+        <!-- Email de confirmation automatique -->
+        <input type="hidden" name="_autoresponse" value="Merci pour votre demande de réservation. Je reviens vers vous sous 24h pour confirmer votre créneau.">
+
+        <input type="hidden" name="_subject" value="Nouvelle réservation YODOTKA">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Champ caché pour le soin -->
+        <input type="hidden" name="service" id="service" required>
+
+        <label>Nom :</label>
+        <input type="text" name="nom" required>
+
+        <label>Prénom :</label>
+        <input type="text" name="prenom" required>
+
+        <label>Email :</label>
+        <input type="email" name="email" required>
+
+        <!-- DATES -->
+        <label>Date :</label>
+        <select id="date" name="date" required>
+            <option value="">Choisir une date</option>
+        </select>
+
+        <!-- CRENEAUX -->
+        <label>Créneau :</label>
+        <select id="creneau" name="creneau" required>
+            <option value="">Choisir un créneau</option>
+        </select>
+
+        <button type="submit" class="btn">Réserver</button>
+    </form>
+
+</section>
+
 <section class="intro fade-up">
 
     <h2>Réservation</h2>
