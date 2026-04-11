@@ -370,4 +370,56 @@ footer {
 .btn-toggle:hover::after {
     width: 100%;
 }
+/* FOOTER PRO */
+.footer {
+    background: var(--light);
+    padding: 50px 40px 20px;
+    box-shadow: 0 -2px 10px var(--shadow);
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col h4 {
+    color: var(--terracotta);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-col p,
+.footer-col a {
+    color: var(--dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--terracotta);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid var(--shadow);
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
 
