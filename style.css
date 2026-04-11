@@ -9,6 +9,42 @@
     --light: #ffffff;
     --shadow: rgba(0,0,0,0.08);
 }
+/* ----------------------------------
+   TYPOGRAPHIE PREMIUM
+---------------------------------- */
+
+/* Paragraphes & texte courant */
+body, p, li, a, button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+}
+
+/* Titres */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--terracotta);
+}
+
+/* H1 plus doux et premium */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+/* H2 harmonisé */
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+}
+
+/* H3 pour les cartes */
+h3 {
+    font-size: 1.5rem;
+}
+
 
 body {
     margin: 0;
