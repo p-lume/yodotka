@@ -66,7 +66,7 @@ body {
 ---------------------------------- */
 .hero {
     height: 70vh;
-    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover2.png") center/cover no-repeat;
+    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover3.png") center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -268,7 +268,7 @@ h2 {
 ---------------------------------- */
 .about-hero {
     height: 50vh;
-    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover2.png") center/cover no-repeat;
+    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover3.png") center/cover no-repeat;
 }
 
 /* ----------------------------------
