@@ -29,7 +29,6 @@ btn.addEventListener("click", () => {
         btn.textContent = "Lire la suite";
     }
 });
-
 /* --- Sélection du soin --- */
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -66,7 +65,7 @@ const creneaux = ["10h00", "14h00", "17h00"];
 const dateSelect = document.getElementById("date");
 const creneauSelect = document.getElementById("creneau");
 
-/* Remplir les dates */
+// Remplir les dates
 dates.forEach(d => {
     const option = document.createElement("option");
     option.value = d;
@@ -74,7 +73,7 @@ dates.forEach(d => {
     dateSelect.appendChild(option);
 });
 
-/* Remplir les créneaux */
+// Remplir les créneaux quand une date est choisie
 dateSelect.addEventListener("change", () => {
     creneauSelect.innerHTML = "<option value=''>Choisir un créneau</option>";
     creneaux.forEach(c => {
@@ -84,5 +83,3 @@ dateSelect.addEventListener("change", () => {
         creneauSelect.appendChild(option);
     });
 });
-
-
