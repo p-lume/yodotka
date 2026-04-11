@@ -74,9 +74,21 @@ body {
     text-align: center;
 }
 
+.hero {
+    height: 75vh; /* un peu plus haut pour voir l’image */
+    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover3.png")
+                center/cover no-repeat fixed; /* parallax fixe */
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* remonte le texte */
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* ajuste la hauteur du texte */
+}
+
 .hero-content {
-    background: rgba(255,255,255,0.7);
-    padding: 30px 40px;
+    background: rgba(255,255,255,0.65);
+    padding: 25px 35px;
     border-radius: 12px;
     backdrop-filter: blur(4px);
 }
@@ -87,6 +99,7 @@ body {
     margin-bottom: 10px;
     color: var(--terracotta);
 }
+
 
 /* --- Gingko autour du copyright --- */
 .footer-bottom {
