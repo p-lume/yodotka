@@ -137,6 +137,7 @@ h3 {
 
 
 /* --- Gingko autour du copyright --- */
+/* --- Gingko autour du copyright --- */
 .footer-bottom {
     position: relative;
     text-align: center;
@@ -144,29 +145,31 @@ h3 {
 
 .footer-bottom p {
     position: relative;
-    width: 60px; /* plus petit et discret */
     z-index: 2;
 }
 
+/* Taille commune des gingkos */
 .footer-bottom .gingko {
     position: absolute;
+    width: 60px; /* taille correcte */
     opacity: 0.8;
     z-index: 1;
 }
 
-
+/* Position du gingko gauche */
 .footer-bottom .g1 {
-   left: 35%;
+    left: 35%;
     bottom: 0;
     transform: rotate(-45deg);
 }
 
-
+/* Position du gingko droit */
 .footer-bottom .g2 {
-   right: 35%;
+    right: 35%;
     bottom: 0;
     transform: rotate(25deg);
 }
+
 
 
 /* ----------------------------------
