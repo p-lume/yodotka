@@ -349,4 +349,182 @@ h2 {
 
 /* STORY BLOCK */
 .about-story {
-    max-width
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.story-block {
+    background: var(--light);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px var(--shadow);
+    line-height: 1.75;
+    font-size: 1.1rem;
+}
+
+.story-block .highlight {
+    background: var(--terracotta);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* ----------------------------------
+   13. HERO RDV
+---------------------------------- */
+.hero-rdv {
+    height: 45vh;
+    background: url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-rdv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(2px);
+}
+
+.hero-rdv-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px 40px;
+}
+
+.hero-rdv-content h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.hero-rdv-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ----------------------------------
+   14. FOOTER
+---------------------------------- */
+.footer {
+    background: var(--light);
+    padding: 50px 40px 20px;
+    box-shadow: 0 -2px 10px var(--shadow);
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col h4 {
+    color: var(--terracotta);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-col p,
+.footer-col a {
+    color: var(--dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--terracotta);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid var(--shadow);
+    font-size: 0.9rem;
+}
+
+/* ----------------------------------
+   15. RESPONSIVE PREMIUM
+---------------------------------- */
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .hero,
+    .hero-rdv,
+    .about-hero {
+        height: 45vh;
+        padding: 0 15px;
+    }
+
+    .hero-content,
+    .hero-rdv-content {
+        padding: 15px 20px;
+    }
+
+    .hero h1,
+    .hero-rdv-content h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .cards {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .home-layout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .about-intro,
+    .about-story {
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 40px 20px 20px;
+    }
+}
+
