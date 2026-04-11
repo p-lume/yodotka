@@ -69,7 +69,7 @@ body {
     background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover3.png") center/cover no-repeat;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: up;
     justify-content: center;
     text-align: center;
 }
