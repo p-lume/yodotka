@@ -1,4 +1,4 @@
-// Animation au scroll
+/* ANIMATION AU SCROLL */
 const faders = document.querySelectorAll('.fade-up, .dip-card');
 
 const appearOptions = {
@@ -6,7 +6,7 @@ const appearOptions = {
     rootMargin: "0px 0px -50px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("appear");
@@ -14,25 +14,11 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     });
 }, appearOptions);
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
+faders.forEach(fader => appearOnScroll.observe(fader));
 
-const btn = document.querySelector(".btn-toggle");
-const story = document.querySelector(".story");
-
-btn.addEventListener("click", () => {
-    story.classList.toggle("open");
-
-    if (story.classList.contains("open")) {
-        btn.textContent = "Réduire";
-    } else {
-        btn.textContent = "Lire la suite";
-    }
-});
-// INSTAGRAM FEED AUTO
+/* INSTAGRAM FEED AUTO */
 async function loadInstagram() {
-    const url = "https://cdn.lightwidget.com/widgets/abcd1234.json"; // remplace par ton lien JSON
+    const url = "https://cdn.lightwidget.com/widgets/abcd1234.json"; // ← remplace par ton lien JSON LightWidget
 
     try {
         const response = await fetch(url);
@@ -40,7 +26,6 @@ async function loadInstagram() {
 
         const container = document.getElementById("insta-feed");
 
-        // On affiche les 6 dernières photos
         data.data.slice(0, 6).forEach(post => {
             const img = document.createElement("img");
             img.src = post.thumbnail;
@@ -54,3 +39,4 @@ async function loadInstagram() {
 }
 
 loadInstagram();
+
