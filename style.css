@@ -378,3 +378,56 @@ h2 {
 .btn-toggle:hover::after {
     width: 100%;
 }
+/* ABOUT INTRO MODERNE */
+.about-intro {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px 30px;
+    background: var(--light);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.about-text p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.about-text .icon {
+    font-size: 1.4rem;
+    margin-top: 3px;
+}
+
+/* STORY PREMIUM */
+.about-story {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.story-block {
+    background: var(--light);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px var(--shadow);
+    line-height: 1.75;
+    font-size: 1.1rem;
+}
+
+.story-block p {
+    margin-bottom: 18px;
+}
+
+.story-block .highlight {
+    background: var(--terracotta);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 25px;
+    text-align: center;
+}
