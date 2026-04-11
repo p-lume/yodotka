@@ -1,4 +1,4 @@
-/* ANIMATION AU SCROLL */
+/* --- Animation au scroll --- */
 const faders = document.querySelectorAll('.fade-up, .dip-card');
 
 const appearOptions = {
@@ -16,19 +16,17 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 
 faders.forEach(fader => appearOnScroll.observe(fader));
 
-
+/* --- Lire la suite (About) --- */
 const btn = document.querySelector(".btn-toggle");
 const story = document.querySelector(".story");
 
-btn.addEventListener("click", () => {
-    story.classList.toggle("open");
+if (btn) {
+    btn.addEventListener("click", () => {
+        story.classList.toggle("open");
+        btn.textContent = story.classList.contains("open") ? "Réduire" : "Lire la suite";
+    });
+}
 
-    if (story.classList.contains("open")) {
-        btn.textContent = "Réduire";
-    } else {
-        btn.textContent = "Lire la suite";
-    }
-});
 /* --- Sélection du soin --- */
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('click', () => {
