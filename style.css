@@ -154,11 +154,13 @@ h3 {
     z-index: 1;
 }
 
-.footer-col .g1 {
-    width: 28px;        /* petit et discret */
-    margin-top: 10px;   /* espace sous le texte */
-    opacity: 0.8;
+
+.footer-bottom .g1 {
+   left: 35%;
+    bottom: 0;
+    transform: rotate(-45deg);
 }
+
 
 .footer-bottom .g2 {
    right: 35%;
