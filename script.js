@@ -18,3 +18,15 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
+const btn = document.querySelector(".btn-toggle");
+const story = document.querySelector(".story");
+
+btn.addEventListener("click", () => {
+    story.classList.toggle("open");
+
+    if (story.classList.contains("open")) {
+        btn.textContent = "Réduire";
+    } else {
+        btn.textContent = "Lire la suite";
+    }
+});
