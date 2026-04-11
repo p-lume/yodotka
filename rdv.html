@@ -59,39 +59,37 @@
     <!-- FORMULAIRE -->
     <form id="rdvForm" action="https://formsubmit.co/prunefacet@gmail.com" method="POST">
 
-        <!-- Email de confirmation automatique -->
-        <input type="hidden" name="_autoresponse" value="Merci pour votre demande de réservation. Je reviens vers vous sous 24h pour confirmer votre créneau.">
+    <!-- Email de confirmation automatique -->
+    <input type="hidden" name="_autoresponse" value="Merci pour votre demande de réservation. Je reviens vers vous sous 24h pour confirmer votre créneau.">
 
-        <input type="hidden" name="_subject" value="Nouvelle réservation YODOTKA">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Nouvelle réservation YODOTKA">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-        <!-- Champ caché pour le soin -->
-        <input type="hidden" name="service" id="service" required>
+    <!-- Champ caché pour le soin -->
+    <input type="hidden" name="Prestation sélectionnée" id="service" required>
 
-        <label>Nom :</label>
-        <input type="text" name="nom" required>
+    <label>Nom :</label>
+    <input type="text" name="Nom" required>
 
-        <label>Prénom :</label>
-        <input type="text" name="prenom" required>
+    <label>Prénom :</label>
+    <input type="text" name="Prénom" required>
 
-        <label>Email :</label>
-        <input type="email" name="email" required>
+    <label>Email :</label>
+    <input type="email" name="Email du client" required>
 
-        <!-- DATES -->
-        <label>Date :</label>
-        <select id="date" name="date" required>
-            <option value="">Choisir une date</option>
-        </select>
+    <label>Date :</label>
+    <select id="date" name="Date choisie" required>
+        <option value="">Choisir une date</option>
+    </select>
 
-        <!-- CRENEAUX -->
-        <label>Créneau :</label>
-        <select id="creneau" name="creneau" required>
-            <option value="">Choisir un créneau</option>
-        </select>
+    <label>Créneau :</label>
+    <select id="creneau" name="Créneau choisi" required>
+        <option value="">Choisir un créneau</option>
+    </select>
 
-        <button type="submit" class="btn">Réserver</button>
-    </form>
+    <button type="submit" class="btn">Réserver</button>
+</form>
 
 </section>
 
