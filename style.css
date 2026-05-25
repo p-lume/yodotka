@@ -103,7 +103,7 @@ h3 {
 ---------------------------------- */
 .hero {
     height: 70vh;
-    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover3.png") center/cover no-repeat;
+    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover_index.jpg") center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: up;
