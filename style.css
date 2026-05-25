@@ -113,7 +113,7 @@ h3 {
 
 .hero {
     height: 75vh; /* un peu plus haut pour voir l’image */
-    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover3.png")
+    background: url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover_index.jpg")
                 center/cover no-repeat fixed; /* parallax fixe */
     position: relative;
     display: flex;
