@@ -168,8 +168,9 @@ h3 {
             ),
             url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/covertel_index.png");
 
-        background-position: center top;
-        background-size: cover;
+      background-size: contain;
+background-position: center;
+background-color: #f6f2ee; /* couleur de fond neutre */
         background-repeat: no-repeat;
 
         /* IMPORTANT iphone */
