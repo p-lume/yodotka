@@ -104,51 +104,78 @@ h3 {
 /* ----------------------------------
    HERO DESKTOP
 ---------------------------------- */
+/* ----------------------------------
+   HERO DESKTOP
+---------------------------------- */
+
 .hero {
     height: 75vh;
+
     background:
-        linear-gradient(rgba(255,255,255,0.15),
-        rgba(255,255,255,0.15)),
+        linear-gradient(
+            rgba(255,255,255,0.15),
+            rgba(255,255,255,0.15)
+        ),
         url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover_index.jpg");
 
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    /* le fixed est souvent moche sur mobile */
     background-attachment: fixed;
 
     position: relative;
     display: flex;
+
     align-items: flex-start;
     justify-content: center;
-    text-align: center;
 
+    text-align: center;
     padding-top: 80px;
+}
+
+/* Bloc texte */
+.hero-content {
+    background: rgba(255,255,255,0.65);
+    padding: 25px 35px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+}
+
+/* Titre */
+.hero h1 {
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--terracotta);
 }
 
 
 /* ----------------------------------
    HERO MOBILE
 ---------------------------------- */
+
 @media (max-width: 768px) {
 
     .hero {
 
-        height: 60vh;
+        height: 72vh;
 
-        /* IMPORTANT */
+        /* image spéciale mobile */
+        background:
+            linear-gradient(
+                rgba(255,255,255,0.10),
+                rgba(255,255,255,0.10)
+            ),
+            url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/covertel_index.jpg");
+
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        /* IMPORTANT iphone */
         background-attachment: scroll;
 
-        /* montre plus du visage / corps */
-        background-position: center 25%;
-
-        /* moins de crop */
-        background-size: cover;
-
-        padding-top: 50px;
-
-        align-items: flex-start;
+        padding-top: 35px;
     }
 
     .hero-content {
@@ -157,18 +184,18 @@ h3 {
         padding: 18px 20px;
 
         background: rgba(255,255,255,0.72);
-        backdrop-filter: blur(6px);
 
         border-radius: 18px;
+
+        backdrop-filter: blur(6px);
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         line-height: 1.1;
     }
 
 }
-
 /* --- Gingko autour du copyright --- */
 /* --- Gingko autour du copyright --- */
 .footer-bottom {
