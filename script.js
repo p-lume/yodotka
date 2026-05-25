@@ -38,14 +38,7 @@ document.querySelectorAll('.service-card').forEach(card => {
 
 /* --- Dates disponibles --- */
 const dates = [
-    "Samedi 2 mai 2026",
-    "Dimanche 3 mai 2026",
-    "Samedi 9 mai 2026",
-    "Dimanche 10 mai 2026",
-    "Samedi 16 mai 2026",
-    "Dimanche 17 mai 2026",
-    "Samedi 23 mai 2026",
-    "Dimanche 24 mai 2026",
+  
     "Samedi 30 mai 2026",
     "Dimanche 31 mai 2026",
     "Samedi 6 juin 2026",
