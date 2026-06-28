@@ -39,16 +39,23 @@ document.querySelectorAll('.service-card').forEach(card => {
 /* --- Dates disponibles --- */
 const dates = [
   
-    "Samedi 30 mai 2026",
-    "Dimanche 31 mai 2026",
-    "Samedi 6 juin 2026",
-    "Dimanche 7 juin 2026",
-    "Samedi 13 juin 2026",
-    "Dimanche 14 juin 2026",
-    "Samedi 20 juin 2026",
-    "Dimanche 21 juin 2026",
-    "Samedi 27 juin 2026",
-    "Dimanche 28 juin 2026"
+   "Samedi 4 juillet 2026",
+"Samedi 11 juillet 2026",
+"Samedi 18 juillet 2026",
+"Samedi 1 août 2026",
+"Samedi 8 août 2026",
+"Samedi 15 août 2026",
+"Samedi 22 août 2026",
+"Samedi 29 août 2026",
+"Samedi 5 septembre 2026",
+"Samedi 12 septembre 2026",
+"Samedi 19 septembre 2026",
+"Samedi 26 septembre 2026",
+"Samedi 3 octobre 2026",
+"Samedi 10 octobre 2026",
+"Samedi 17 octobre 2026",
+"Samedi 24 octobre 2026",
+"Samedi 31 octobre 2026"
 ];
 
 const creneaux = ["10h00", "14h00", "17h00"];
