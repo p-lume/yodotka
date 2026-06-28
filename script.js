@@ -115,10 +115,9 @@ const dates = [
 
 ];
 
-const creneaux = ["10h00", "14h00", "17h00"];
+
 
 const dateSelect = document.getElementById("date");
-const creneauSelect = document.getElementById("creneau");
 
 // Remplir les dates
 dates.forEach(d => {
@@ -128,13 +127,5 @@ dates.forEach(d => {
     dateSelect.appendChild(option);
 });
 
-// Remplir les créneaux quand une date est choisie
-dateSelect.addEventListener("change", () => {
-    creneauSelect.innerHTML = "<option value=''>Choisir un créneau</option>";
-    creneaux.forEach(c => {
-        const option = document.createElement("option");
-        option.value = c;
-        option.textContent = c;
-        creneauSelect.appendChild(option);
-    });
+
 });
