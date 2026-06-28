@@ -39,23 +39,80 @@ document.querySelectorAll('.service-card').forEach(card => {
 /* --- Dates disponibles --- */
 const dates = [
   
-   "Samedi 4 juillet 2026",
-"Samedi 11 juillet 2026",
-"Samedi 18 juillet 2026",
-"Samedi 1 août 2026",
-"Samedi 8 août 2026",
-"Samedi 15 août 2026",
-"Samedi 22 août 2026",
-"Samedi 29 août 2026",
-"Samedi 5 septembre 2026",
-"Samedi 12 septembre 2026",
-"Samedi 19 septembre 2026",
-"Samedi 26 septembre 2026",
-"Samedi 3 octobre 2026",
-"Samedi 10 octobre 2026",
-"Samedi 17 octobre 2026",
-"Samedi 24 octobre 2026",
-"Samedi 31 octobre 2026"
+ ```text
+"Samedi 4 juillet à 10h",
+"Samedi 4 juillet à 14h",
+"Samedi 4 juillet à 17h",
+
+"Samedi 11 juillet à 10h",
+"Samedi 11 juillet à 14h",
+"Samedi 11 juillet à 17h",
+
+"Samedi 18 juillet à 10h",
+"Samedi 18 juillet à 14h",
+"Samedi 18 juillet à 17h",
+
+"Samedi 25 juillet à 10h",
+"Samedi 25 juillet à 14h",
+"Samedi 25 juillet à 17h",
+
+"Samedi 1 août à 10h",
+"Samedi 1 août à 14h",
+"Samedi 1 août à 17h",
+
+"Samedi 8 août à 10h",
+"Samedi 8 août à 14h",
+"Samedi 8 août à 17h",
+
+"Samedi 15 août à 10h",
+"Samedi 15 août à 14h",
+"Samedi 15 août à 17h",
+
+"Samedi 22 août à 10h",
+"Samedi 22 août à 14h",
+"Samedi 22 août à 17h",
+
+"Samedi 29 août à 10h",
+"Samedi 29 août à 14h",
+"Samedi 29 août à 17h",
+
+"Samedi 5 septembre à 10h",
+"Samedi 5 septembre à 14h",
+"Samedi 5 septembre à 17h",
+
+"Samedi 12 septembre à 10h",
+"Samedi 12 septembre à 14h",
+"Samedi 12 septembre à 17h",
+
+"Samedi 19 septembre à 10h",
+"Samedi 19 septembre à 14h",
+"Samedi 19 septembre à 17h",
+
+"Samedi 26 septembre à 10h",
+"Samedi 26 septembre à 14h",
+"Samedi 26 septembre à 17h",
+
+"Samedi 3 octobre à 10h",
+"Samedi 3 octobre à 14h",
+"Samedi 3 octobre à 17h",
+
+"Samedi 10 octobre à 10h",
+"Samedi 10 octobre à 14h",
+"Samedi 10 octobre à 17h",
+
+"Samedi 17 octobre à 10h",
+"Samedi 17 octobre à 14h",
+"Samedi 17 octobre à 17h",
+
+"Samedi 24 octobre à 10h",
+"Samedi 24 octobre à 14h",
+"Samedi 24 octobre à 17h",
+
+"Samedi 31 octobre à 10h",
+"Samedi 31 octobre à 14h",
+"Samedi 31 octobre à 17h"
+```
+
 ];
 
 const creneaux = ["10h00", "14h00", "17h00"];
