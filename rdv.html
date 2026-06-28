@@ -17,22 +17,20 @@
         <li><a href="kobido.html">Kobido</a></li>
         <li><a href="yoga.html">Yoga</a></li>
         <li><a href="rdv.html" class="active">Prendre RDV</a></li>
-         <li><a href="aboutme.html">À propos</a></li>
+        <li><a href="aboutme.html">À propos</a></li>
     </ul>
 </nav>
-    <!--HERO-rdv-->
- <header class="hero">
-        <div class="hero-content fade-up">
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content fade-up">
         <h1>Prendre rendez-vous</h1>
         <p>Un moment de soin, de calme et d'équilibre.</p>
     </div>
-
 </header>
 
-
-
 <!-- SECTION RDV -->
-    <section class="resa">
+<section class="resa">
 
     <h2>Réserver un soin</h2>
 
@@ -52,87 +50,96 @@
             <h3>Shiatsu</h3>
             <p>75 min — 90 €</p>
         </div>
-         <div class="service-card" data-value="yoga_60">
+
+        <div class="service-card" data-value="yoga_60">
             <h3>Yoga</h3>
             <p>sur demande</p>
         </div>
     </div>
 
     <!-- FORMULAIRE -->
-    <form id="rdvForm" action="https://formsubmit.co/prunefacet@gmail.com" method="POST">
+    <form id="rdvForm" action="https://formsubmit.co/marikaawuhan@yahoo.fr" method="POST">
 
-    <!-- Email de confirmation automatique -->
-    <input type="hidden" name="_autoresponse" value="Merci pour votre demande de réservation. Je reviens vers vous sous 24h pour confirmer votre créneau.">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="_subject" value="Nouvelle réservation YODOTKA">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
-    <input type="hidden" name="_subject" value="Nouvelle réservation YODOTKA">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
+        <!-- Redirection après envoi -->
+        <input type="hidden" name="_next" value="merci.html">
 
-    <!-- Champ caché pour le soin -->
-    <input type="hidden" name="Prestation sélectionnée" id="service" required>
+        <!-- Email automatique envoyé au client -->
+        <input type="hidden" name="_autoresponse" value="Merci d'avoir réservé chez YODOTKA. Votre demande a bien été reçue. Nous vous recontacterons sous 24 heures afin de confirmer votre créneau.">
 
-    <label>Nom :</label>
-    <input type="text" name="Nom" required>
+        <!-- Champ caché pour le soin -->
+        <input type="hidden" name="Prestation sélectionnée" id="service" required>
 
-    <label>Prénom :</label>
-    <input type="text" name="Prénom" required>
+        <label>Nom :</label>
+        <input type="text" name="Nom" required>
 
-    <label>Email :</label>
-    <input type="email" name="Email du client" required>
+        <label>Prénom :</label>
+        <input type="text" name="Prénom" required>
 
-    <label>Date :</label>
-    <select id="date" name="Date choisie" required>
-        <option value="">Choisir une date</option>
-    </select>
+        <label>Email :</label>
+        <input type="email" name="Email du client" required>
 
- 
+        <label>Date :</label>
+        <select id="date" name="Date choisie" required>
+            <option value="">Choisir une date</option>
+        </select>
 
-    <button type="submit" class="btn">Réserver</button>
-</form>
-        <p>Les paiements se font en chèque, espèces ou virement (Wero possible). Yodotka émet des factures sur demande. 
-            Politique d'annulation: gratuit jusqu'à 24h avant le soin. 24h avant : 50% ou reprogrammation selon la situation sur appel. J'essaie au maximum de vous proposer une alternative.
-      </p>
+        <button type="submit" class="btn">Réserver</button>
+
+    </form>
+
+    <p>
+        Les paiements se font en chèque, espèces ou virement (Wero possible).
+        Yodotka émet des factures sur demande.
+        Politique d'annulation : gratuit jusqu'à 24h avant le soin.
+        Moins de 24h avant : 50 % ou reprogrammation selon la situation sur appel.
+        J'essaie au maximum de vous proposer une alternative.
+    </p>
 
 </section>
 
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-
-            <div class="footer-col">
-                <h4>YODOTKA</h4>
-                <p>Bien‑être, shiatsu, kobido, yoga et pratiques naturelles en Île‑de‑France.</p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="shiatsu.html">Shiatsu</a></li>
-                    <li><a href="kobido.html">Kobido</a></li>
-                    <li><a href="yoga.html">Yoga</a></li>
-                    <li><a href="aboutme.html">À propos</a></li>
-                    <li><a href="rdv.html">Prendre RDV</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Île‑de‑France, France</p>
-                <p>Email : <a href="mailto:contact@yodotka.com">contact@yodotka.com</a></p>
-            </div>
-
+        <div class="footer-col">
+            <h4>YODOTKA</h4>
+            <p>Bien-être, shiatsu, kobido, yoga et pratiques naturelles en Île-de-France.</p>
         </div>
 
-        <div class="footer-bottom">
-                     <img src="img/gingko.svg" class="gingko g1">
-            <p>© 2026 YODOTKA – Tous droits réservés</p>
-             <img src="img/gingko.svg" class="gingko g2">
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shiatsu.html">Shiatsu</a></li>
+                <li><a href="kobido.html">Kobido</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="aboutme.html">À propos</a></li>
+                <li><a href="rdv.html">Prendre RDV</a></li>
+            </ul>
         </div>
 
-    </footer>
-    <script src="script.js"></script>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>Île-de-France, France</p>
+            <p>Email : <a href="mailto:contact@yodotka.com">contact@yodotka.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <img src="img/gingko.svg" class="gingko g1">
+        <p>© 2026 YODOTKA – Tous droits réservés</p>
+        <img src="img/gingko.svg" class="gingko g2">
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
