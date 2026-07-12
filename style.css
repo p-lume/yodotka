@@ -1,80 +1,123 @@
+/* ==================================================================
+   YODOTKA — STYLE PREMIUM
+   Refonte du fichier d'origine : mêmes classes, mêmes images,
+   système de tokens, ombres corrigées, micro-interactions affinées.
+   ================================================================== */
+
 /* ----------------------------------
-   1. PALETTE & BASE
+   1. TOKENS
 ---------------------------------- */
 :root {
+    /* Couleurs */
     --beige: #f7f2eb;
     --gold: #d4a86a;
     --terracotta: #d97a4f;
+    --terracotta-dark: #b85f39;   /* était utilisé mais jamais défini */
+    --ink: #241d19;               /* noir chaud, plus profond que --dark */
     --dark: #3a2f2a;
     --light: #ffffff;
-    --shadow: rgba(0,0,0,0.08);
-   background: var(--light);
+    --text: #3a2f2a;              /* était utilisé mais jamais défini */
 
+    /* Ombres — à 3 niveaux, toujours complètes (x y blur couleur) */
+    --shadow-color: 24, 20, 17;
+    --shadow-1: 0 2px 8px rgba(var(--shadow-color), 0.06);
+    --shadow-2: 0 8px 24px rgba(var(--shadow-color), 0.10);
+    --shadow-3: 0 20px 45px rgba(var(--shadow-color), 0.16);
+    --shadow: rgba(0,0,0,0.08); /* conservé pour compat, non recommandé pour box-shadow direct */
+    --shadow-soft: var(--shadow-1); /* était utilisé mais jamais défini */
+
+    /* Rayons */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+
+    /* Espacement */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 30px;
+    --space-lg: 50px;
+    --space-xl: 80px;
+
+    /* Easing premium (ease-out expo léger) au lieu de "ease" plat */
+    --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+    background: var(--light);
 }
-/* ----------------------------------
-   TYPOGRAPHIE PREMIUM
----------------------------------- */
 
 /* ----------------------------------
-   TYPOGRAPHIE PREMIUM PLAYFAIR
+   2. TYPOGRAPHIE
 ---------------------------------- */
-
-/* Texte courant */
-body, p, li, a, button {
+body, p, li, a, button, input, textarea {
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.2px;
-    color: var(--dark);
+    font-weight: 400; /* 300 = trop fin pour rester lisible en premium */
+    letter-spacing: 0.15px;
+    line-height: 1.7;
+    color: var(--text);
 }
 
-/* Titres */
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
+    color: var(--ink);
+}
+
+/* Hiérarchie claire — une seule définition par niveau, pas de doublon écrasé plus loin */
+h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: var(--space-md);
     color: var(--terracotta);
 }
 
-/* H1 : élégant, moderne */
-h1 {
-    font-size: 4.2rem;
-    font-weight: 600;
-    font-style: italic; /* option premium */
-}
-
-/* H2 : plus doux */
-h2 {
-    font-size: 3.2rem;
-    margin-bottom: 35px;
-    font-style: italic; /* optionnel mais très beau */
-}
-
-/* H3 : pour les cartes */
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--terracotta);
 }
 
+/* Petite touche "signature" : eyebrow discret au-dessus des titres de section,
+   à utiliser en ajoutant <span class="eyebrow">Rituel</span> avant un h2 */
+.eyebrow {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    text-align: center;
+}
 
 /* ----------------------------------
-   2. NAVBAR
+   3. NAVBAR
 ---------------------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
+    padding: 20px 40px;
     background: var(--light);
-    box-shadow: 0 2px 10px var(--shadow);
+    box-shadow: var(--shadow-1);
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     letter-spacing: 2px;
-    color: var(--dark);
+    color: var(--ink);
 }
 
 .logo span {
@@ -83,14 +126,30 @@ h3 {
 
 .navbar ul {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     list-style: none;
 }
 
 .navbar a {
+    position: relative;
     text-decoration: none;
     color: var(--dark);
+    font-size: 0.92rem;
     font-weight: 500;
+    letter-spacing: 0.4px;
+    padding-bottom: 4px;
+}
+
+/* Soulignement animé plutôt qu'un simple changement de couleur */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--terracotta);
+    transition: width 0.35s var(--ease-premium);
 }
 
 .navbar a.active,
@@ -98,140 +157,73 @@ h3 {
     color: var(--terracotta);
 }
 
-/* ----------------------------------
-   3. HERO (HOME)
----------------------------------- */
-/* ----------------------------------
-   HERO DESKTOP
----------------------------------- */
-/* ----------------------------------
-   HERO DESKTOP
----------------------------------- */
+.navbar a.active::after,
+.navbar a:hover::after {
+    width: 100%;
+}
 
+/* ----------------------------------
+   4. HERO (HOME)
+---------------------------------- */
 .hero {
     height: 75vh;
-
     background:
-        linear-gradient(
-            rgba(255,255,255,0.15),
-            rgba(255,255,255,0.15)
-        ),
+        linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
         url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/cover_index.jpg");
-
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     position: relative;
     display: flex;
-
     align-items: flex-start;
     justify-content: center;
-
     text-align: center;
     padding-top: 80px;
 }
 
-/* Bloc texte */
 .hero-content {
-    background: rgba(255,255,255,0.65);
-    padding: 25px 35px;
-    border-radius: 16px;
-    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.7);
+    padding: 30px 40px;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--shadow-2);
 }
 
-/* Titre */
 .hero h1 {
     font-size: 3.2rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-bottom: 10px;
     color: var(--terracotta);
 }
 
-
-/* ----------------------------------
-   HERO MOBILE
----------------------------------- */
-
 @media (max-width: 768px) {
-
     .hero {
-
         height: 72vh;
-
-        /* image spéciale mobile */
         background:
-            linear-gradient(
-                rgba(255,255,255,0.10),
-                rgba(255,255,255,0.10)
-            ),
+            linear-gradient(rgba(255,255,255,0.10), rgba(255,255,255,0.10)),
             url("https://raw.githubusercontent.com/p-lume/yodotka/main/img/covertel_index.png");
-
-      background-size: contain;
-background-position: center;
-background-color: #f6f2ee; /* couleur de fond neutre */
+        background-size: contain;
+        background-position: center;
+        background-color: #f6f2ee;
         background-repeat: no-repeat;
-
-        /* IMPORTANT iphone */
         background-attachment: scroll;
-
         padding-top: 35px;
     }
 
     .hero-content {
-
         width: 88%;
-        padding: 18px 20px;
-
-        background: rgba(255,255,255,0.72);
-
-        border-radius: 18px;
-
+        padding: 20px 22px;
+        background: rgba(255,255,255,0.78);
+        border-radius: var(--radius-lg);
         backdrop-filter: blur(6px);
     }
 
     .hero h1 {
         font-size: 2.1rem;
-        line-height: 1.1;
+        line-height: 1.15;
     }
-
 }
-/* --- Gingko autour du copyright --- */
-/* --- Gingko autour du copyright --- */
-.footer-bottom {
-    position: relative;
-    text-align: center;
-}
-
-.footer-bottom p {
-    position: relative;
-    z-index: 2;
-}
-
-/* Taille commune des gingkos */
-.footer-bottom .gingko {
-    position: absolute;
-    width: 60px; /* taille correcte */
-    opacity: 0.8;
-    z-index: 1;
-}
-
-/* Position du gingko gauche */
-.footer-bottom .g1 {
-    left: 35%;
-    bottom: 0;
-    transform: rotate(-45deg);
-}
-
-/* Position du gingko droit */
-.footer-bottom .g2 {
-    right: 35%;
-    bottom: 0;
-    transform: rotate(25deg);
-}
-
-
 
 /* ----------------------------------
    5. INTRO
@@ -239,92 +231,50 @@ background-color: #f6f2ee; /* couleur de fond neutre */
 .intro {
     max-width: 900px;
     margin: auto;
-    padding: 40px 20px;
+    padding: var(--space-xl) 20px;
     font-size: 1.1rem;
-}
-
-/* ----------------------------------
-   6. TITRES
----------------------------------- */
-h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--terracotta);
 }
 
 /* ----------------------------------
-   7. CARDS
+   6. CARDS (prestations)
 ---------------------------------- */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    gap: var(--space-md);
     padding: 0 40px;
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
     padding-bottom: 20px;
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeUp 1s forwards;
-    transition: transform .4s ease, box-shadow .4s ease;
+    animation: fadeUp 0.9s var(--ease-premium) forwards;
+    transition: transform .45s var(--ease-premium), box-shadow .45s var(--ease-premium);
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-3);
 }
 
 .card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 12px 12px 0 0;
-    transition: transform .5s ease;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    transition: transform .6s var(--ease-premium);
 }
 
 .card:hover img {
     transform: scale(1.05);
-}
-
-.card h3 {
-    padding: 15px 20px 0;
-    color: var(--terracotta);
-}
-
-.card p {
-    padding: 0 20px;
-}
-
-.btn-small {
-    display: inline-block;
-    margin: 15px 20px;
-    padding: 8px 16px;
-    background: var(--terracotta);
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all .3s ease;
-}
-
-.btn-small:hover {
-    background: var(--dark);
-}
-/* HARMONISATION DES CARTES PRESTATIONS */
-.cards .card {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* permet l’alignement parfait */
-}
-
-.card img {
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
 }
 
 .card h3,
@@ -332,17 +282,43 @@ h2 {
     padding: 0 20px;
 }
 
-.card p {
-    flex-grow: 1; /* pousse le bouton vers le bas */
-    margin-bottom: 15px;
+.card h3 {
+    padding-top: 15px;
 }
 
-.card .btn-small {
+.card p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.btn-small,
+.btn-read {
+    display: inline-block;
     align-self: flex-start;
     margin: 0 20px 20px;
+    padding: 10px 20px;
+    background: var(--terracotta);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background .3s var(--ease-soft), transform .3s var(--ease-premium), box-shadow .3s var(--ease-premium);
 }
 
-/* GALLERY YOGA PREMIUM */
+.btn-small:hover,
+.btn-read:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+}
+
+/* ----------------------------------
+   7. GALERIE YOGA
+---------------------------------- */
 .yoga-gallery {
     max-width: 1100px;
     margin: 60px auto;
@@ -352,13 +328,13 @@ h2 {
 .yoga-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: var(--space-md);
 }
 
 .yoga-photo {
     overflow: hidden;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px var(--shadow);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
     background: var(--light);
     height: 320px;
     display: flex;
@@ -370,7 +346,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .6s ease;
+    transition: transform .7s var(--ease-premium);
 }
 
 .yoga-photo:hover img {
@@ -388,12 +364,17 @@ h2 {
 .appear {
     opacity: 1 !important;
     transform: translateY(0) !important;
+    transition: opacity .8s var(--ease-premium), transform .8s var(--ease-premium);
 }
 
 @keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
 
@@ -406,35 +387,33 @@ h2 {
 }
 
 /* ----------------------------------
-   10. DIPLOMES GRID
+   10. DIPLÔMES
 ---------------------------------- */
-/* HARMONISATION DES DIPLOMES */
 .diplomes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    gap: var(--space-md);
     padding: 0 40px 60px;
 }
 
 .dip-card {
     background: var(--light);
     padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px var(--shadow);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 180px; /* harmonisation */
-    transition: transform .4s ease, box-shadow .4s ease;
+    min-height: 180px;
+    transition: transform .4s var(--ease-premium), box-shadow .4s var(--ease-premium);
 }
 
 .dip-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-3);
 }
 
 .dip-card h3 {
-    color: var(--terracotta);
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
@@ -445,14 +424,13 @@ h2 {
     color: var(--dark);
 }
 
-
 /* ----------------------------------
    11. HOME LAYOUT + SIDEBAR
 ---------------------------------- */
 .home-layout {
     display: grid;
     grid-template-columns: 1fr 320px;
-    gap: 50px;
+    gap: var(--space-lg);
     padding: 40px;
     align-items: start;
 }
@@ -460,21 +438,46 @@ h2 {
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--space-md);
     position: sticky;
     top: 100px;
 }
 
-.mini-bio, .insta-box {
+.mini-bio, .insta-box, .sidebar-news {
     background: var(--light);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
 }
 
-.mini-bio h3, .insta-box h3 {
-    color: var(--terracotta);
-    margin-bottom: 10px;
+.mini-bio h3, .insta-box h3, .sidebar-news h3 {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-news {
+    animation: fadeUp .6s var(--ease-premium);
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    box-shadow: var(--shadow-soft);
+}
+
+.news-title {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--text);
+    font-weight: 500;
 }
 
 /* ----------------------------------
@@ -494,7 +497,7 @@ h2 {
 .story-more {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.6s ease, opacity 0.6s ease;
+    transition: max-height 0.6s var(--ease-soft), opacity 0.6s var(--ease-soft);
     opacity: 0;
 }
 
@@ -511,6 +514,7 @@ h2 {
     background: transparent;
     color: var(--terracotta);
     font-weight: 600;
+    letter-spacing: 0.3px;
     cursor: pointer;
     position: relative;
 }
@@ -519,31 +523,30 @@ h2 {
     content: "";
     display: block;
     width: 0;
-    height: 2px;
+    height: 1px;
     background: var(--terracotta);
-    transition: width 0.3s;
-    margin: auto;
+    transition: width 0.3s var(--ease-premium);
+    margin: 4px auto 0;
 }
 
 .btn-toggle:hover::after {
     width: 100%;
 }
 
-/* ABOUT INTRO */
 .about-intro {
     max-width: 900px;
     margin: 60px auto;
-    padding: 20px 30px;
+    padding: 30px 35px;
     background: var(--light);
-    border-radius: 14px;
-    box-shadow: 0 4px 20px var(--shadow);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
 }
 
 .about-text p {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 18px;
 }
@@ -551,9 +554,9 @@ h2 {
 .about-text .icon {
     font-size: 1.4rem;
     margin-top: 3px;
+    color: var(--gold);
 }
 
-/* STORY BLOCK */
 .about-story {
     max-width: 900px;
     margin: 60px auto;
@@ -562,21 +565,45 @@ h2 {
 
 .story-block {
     background: var(--light);
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px var(--shadow);
+    padding: 35px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
     line-height: 1.75;
-    font-size: 1.1rem;
+    font-size: 1.08rem;
 }
 
 .story-block .highlight {
     background: var(--terracotta);
     color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     margin-top: 25px;
     text-align: center;
+}
+
+.mini-portrait {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mini-portrait img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-2);
+    border: 3px solid var(--light);
+}
+
+.portrait-name {
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--terracotta);
+    letter-spacing: 0.3px;
 }
 
 /* ----------------------------------
@@ -596,7 +623,7 @@ h2 {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.4);
     backdrop-filter: blur(2px);
 }
 
@@ -610,15 +637,17 @@ h2 {
 .hero-rdv-content h1 {
     font-size: 2.6rem;
     margin-bottom: 10px;
+    color: white;
 }
 
 .hero-rdv-content p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     opacity: 0.9;
 }
-/* CARROUSEL PREMIUM FIN & ÉQUILIBRÉ */
+
+/* CARROUSEL */
 .carousel {
-    max-width: 750px; /* plus fin, plus élégant */
+    max-width: 750px;
     margin: 50px auto;
     padding: 0 20px;
 }
@@ -626,15 +655,14 @@ h2 {
 .carousel-container {
     position: relative;
     overflow: hidden;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-2);
     background: var(--light);
 }
 
-/* Taille harmonisée */
 .carousel-slide {
     display: none;
-    height: 320px; /* taille premium */
+    height: 320px;
 }
 
 .carousel-slide.active {
@@ -644,60 +672,43 @@ h2 {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* recadrage propre */
+    object-fit: cover;
     object-position: center;
-    border-radius: 14px;
-    transition: transform .6s ease;
+    border-radius: var(--radius-md);
+    transition: transform .6s var(--ease-premium);
 }
 
 .carousel-slide.active img:hover {
     transform: scale(1.04);
 }
 
-/* Boutons fins */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.75);
     border: none;
     padding: 8px 12px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
     color: var(--dark);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    transition: background .3s ease, transform .3s ease;
+    box-shadow: var(--shadow-2);
+    transition: background .3s var(--ease-soft), transform .3s var(--ease-premium);
 }
 
 .carousel-btn:hover {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-btn.prev {
-    left: 12px;
-}
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
 
-.carousel-btn.next {
-    right: 12px;
-}
-
-/* Mobile */
 @media (max-width: 900px) {
-    .carousel {
-        max-width: 100%;
-        padding: 0 15px;
-    }
-
-    .carousel-slide {
-        height: 220px;
-    }
-
-    .carousel-btn {
-        padding: 6px 10px;
-        font-size: 16px;
-    }
+    .carousel { max-width: 100%; padding: 0 15px; }
+    .carousel-slide { height: 220px; }
+    .carousel-btn { padding: 6px 10px; font-size: 16px; }
 }
 
 /* ----------------------------------
@@ -706,7 +717,7 @@ h2 {
 .footer {
     background: var(--light);
     padding: 50px 40px 20px;
-    box-shadow: 0 -2px 10px var(--shadow);
+    box-shadow: 0 -2px 10px rgba(var(--shadow-color), 0.06);
     margin-top: 60px;
 }
 
@@ -721,7 +732,9 @@ h2 {
 .footer-col h4 {
     color: var(--terracotta);
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
 }
 
 .footer-col p,
@@ -741,81 +754,51 @@ h2 {
     margin-bottom: 8px;
 }
 
+.footer-col ul li a {
+    transition: color .25s var(--ease-soft);
+}
+
 .footer-col ul li a:hover {
     color: var(--terracotta);
 }
 
+/* Gingko décoratif autour du copyright */
 .footer-bottom {
+    position: relative;
     text-align: center;
     margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid var(--shadow);
-    font-size: 0.9rem;
+    border-top: 1px solid rgba(var(--shadow-color), 0.1);
+    font-size: 0.88rem;
+}
+
+.footer-bottom p {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom .gingko {
+    position: absolute;
+    width: 60px;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.footer-bottom .g1 {
+    left: 35%;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.footer-bottom .g2 {
+    right: 35%;
+    bottom: 0;
+    transform: rotate(25deg);
 }
 
 /* ----------------------------------
-   15. RESPONSIVE PREMIUM
+   15. SERVICES (onglets)
 ---------------------------------- */
-@media (max-width: 900px) {
-
-    .navbar {
-        padding: 14px 20px;
-    }
-
-    .navbar ul {
-        gap: 12px;
-    }
-
-    .hero,
-    .hero-rdv,
-    .about-hero {
-        height: 45vh;
-        padding: 0 15px;
-    }
-
-    .hero-content,
-    .hero-rdv-content {
-        padding: 15px 20px;
-    }
-
-    .hero h1,
-    .hero-rdv-content h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.7rem;
-    }
-
-    .cards {
-        padding: 0 20px;
-        gap: 20px;
-    }
-
-    .card img {
-        height: 180px;
-    }
-
-    .home-layout {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 30px;
-    }
-
-    .sidebar {
-        position: static;
-    }
-
-    .about-intro,
-    .about-story {
-        margin: 40px auto;
-        padding: 20px;
-    }
-
-    .footer {
-        padding: 40px 20px 20px;
-    }
-}
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -826,22 +809,27 @@ h2 {
 .service-card {
     background: var(--light);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
     cursor: pointer;
-    transition: .3s ease;
     text-align: center;
+    transition: transform .3s var(--ease-premium), box-shadow .3s var(--ease-premium), border-color .3s var(--ease-soft);
+    border: 2px solid transparent;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-2);
 }
 
 .service-card.active {
-    border: 2px solid var(--terracotta);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: var(--terracotta);
+    box-shadow: var(--shadow-3);
 }
-/* --- Shiatsu Session Steps --- */
+
+/* ----------------------------------
+   16. SHIATSU — ÉTAPES & BÉNÉFICES
+---------------------------------- */
 .shiatsu-session {
     max-width: 1100px;
     margin: 70px auto;
@@ -852,33 +840,33 @@ h2 {
 .session-steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    gap: var(--space-md);
     margin-top: 40px;
 }
 
 .step-card {
     background: var(--light);
     padding: 30px 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px var(--shadow);
-    transition: .3s ease;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    transition: transform .35s var(--ease-premium), box-shadow .35s var(--ease-premium);
 }
 
 .step-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-3);
 }
 
 .step-icon {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     margin-bottom: 15px;
+    color: var(--gold);
 }
 
 .step-card h3 {
-    color: var(--terracotta);
     margin-bottom: 10px;
 }
-/* --- Shiatsu Benefits Grid --- */
+
 .shiatsu-benefits {
     max-width: 1000px;
     margin: 60px auto;
@@ -896,78 +884,23 @@ h2 {
 .benefit-card {
     background: var(--light);
     padding: 25px 15px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px var(--shadow);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
     font-weight: 600;
     color: var(--dark);
     border: 2px solid transparent;
-    transition: .3s ease;
+    transition: border-color .3s var(--ease-soft), transform .3s var(--ease-premium), box-shadow .3s var(--ease-premium);
 }
 
 .benefit-card:hover {
     border-color: var(--terracotta);
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-.mini-portrait {
-    text-align: center;
-    margin-bottom: 20px;
+    box-shadow: var(--shadow-3);
 }
 
-.mini-portrait img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px var(--shadow);
-    border: 3px solid var(--light);
-}
-
-.portrait-name {
-    margin-top: 10px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--terracotta);
-    letter-spacing: 0.5px;
-}
-/* --- BLOC ACTUALITÉS --- */
-.sidebar-news {
-    background: var(--light);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    margin-top: 30px;
-    animation: fadeUp 0.6s ease-out;
-}
-
-.sidebar-news h3 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: var(--terracotta);
-    font-weight: 600;
-}
-
-.news-item {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.news-item img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: var(--shadow-soft);
-}
-
-.news-title {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: var(--text);
-    font-weight: 500;
-}
-/* HERO ARTICLES */
+/* ----------------------------------
+   17. ARTICLES
+---------------------------------- */
 .hero-articles {
     background: url('img/hero-articles.jpg') center/cover no-repeat;
     height: 40vh;
@@ -976,7 +909,6 @@ h2 {
     justify-content: center;
 }
 
-/* PAGE ARTICLES */
 .articles-container {
     max-width: 900px;
     margin: 60px auto;
@@ -986,14 +918,18 @@ h2 {
     gap: 40px;
 }
 
-/* ARTICLE CARD */
 .article-card {
     background: var(--light);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-1);
     display: flex;
     flex-direction: column;
+    transition: box-shadow .35s var(--ease-premium);
+}
+
+.article-card:hover {
+    box-shadow: var(--shadow-3);
 }
 
 .article-img {
@@ -1003,11 +939,11 @@ h2 {
 }
 
 .article-content {
-    padding: 20px 25px;
+    padding: 22px 25px;
 }
 
 .article-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--terracotta);
     margin-bottom: 10px;
 }
@@ -1019,253 +955,139 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn-read {
-    display: inline-block;
-    padding: 10px 18px;
-    background: var(--terracotta);
-    color: white;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: 0.3s ease;
+/* ----------------------------------
+   18. RESPONSIVE — TABLETTE
+---------------------------------- */
+@media (max-width: 900px) {
+    .navbar { padding: 14px 20px; }
+    .navbar ul { gap: 16px; }
+
+    .hero, .hero-rdv, .about-hero {
+        height: 45vh;
+        padding: 0 15px;
+    }
+
+    .hero-content, .hero-rdv-content { padding: 18px 22px; }
+    .hero h1, .hero-rdv-content h1 { font-size: 2rem; }
+
+    h2 { font-size: 1.9rem; }
+
+    .cards { padding: 0 20px; gap: 20px; }
+    .card img { height: 180px; }
+
+    .home-layout { grid-template-columns: 1fr; padding: 20px; gap: 30px; }
+    .sidebar { position: static; }
+
+    .about-intro, .about-story { margin: 40px auto; padding: 20px; }
+
+    .footer { padding: 40px 20px 20px; }
 }
 
-.btn-read:hover {
-    background: var(--terracotta-dark);
-    transform: translateY(-2px);
+/* ----------------------------------
+   19. RESPONSIVE — MOBILE
+---------------------------------- */
+@media (max-width: 768px) {
+    html { font-size: 18px; -webkit-text-size-adjust: 100%; }
+    body { font-size: 1rem; line-height: 1.75; }
+
+    .navbar { padding: 12px 18px; }
+
+    .navbar ul {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .navbar ul::-webkit-scrollbar { display: none; }
+
+    .menu-toggle {
+        display: flex;
+        width: 42px;
+        height: 42px;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .hero {
+        height: 32vh;
+        min-height: 240px;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: scroll;
+        padding-top: 20px;
+    }
+
+    .hero-content { width: 92%; padding: 18px; border-radius: var(--radius-lg); }
+    .hero h1 { font-size: 2.3rem; line-height: 1.15; }
+    .hero p { font-size: 1.05rem; }
+
+    h2 { font-size: 1.9rem; }
+    h3 { font-size: 1.4rem; }
+    p, li { font-size: 1.05rem; }
+
+    .intro, .about-intro, .about-story, .story,
+    .cards, .shiatsu-session, .shiatsu-benefits, .yoga-gallery {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .cards, .session-steps, .benefits-grid, .diplomes-grid, .yoga-grid {
+        gap: 22px;
+    }
+
+    .card, .dip-card, .step-card, .benefit-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .card img { height: 240px; }
+
+    .btn-small, .btn-read {
+        display: inline-block;
+        padding: 14px 24px;
+        font-size: 1rem;
+        border-radius: var(--radius-sm);
+    }
+
+    .home-layout { grid-template-columns: 1fr; gap: 25px; }
+    .sidebar { position: static; }
+
+    .footer { padding: 35px 20px; }
+    .footer-bottom .gingko { display: none; }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 78%;
+        height: 100vh;
+        background: #fff;
+        transition: right .4s var(--ease-premium);
+        z-index: 999;
+        padding: 90px 30px;
+        box-shadow: -10px 0 30px rgba(var(--shadow-color), 0.18);
+    }
+
+    .mobile-menu.open { right: 0; }
+
+    .mobile-menu a {
+        display: block;
+        text-decoration: none;
+        color: var(--ink);
+        font-size: 1.2rem;
+        margin: 22px 0;
+    }
 }
 
-/* ==========================================================================
-YODOTKA - AJOUTER CE BLOC A LA FIN DE TON style.css
-Optimisations mobiles uniquement : le rendu PC reste inchangé.
-========================================================================== */
-
-@media (max-width:768px){
-
-html{
-    font-size:18px;
-    -webkit-text-size-adjust:100%;
-}
-
-body{
-    font-size:1rem;
-    line-height:1.75;
-}
-
-.navbar{
-    padding:12px 18px;
-    position:sticky;
-}
-
-.navbar ul{
-    display:none;
-}
-
-.menu-toggle{
-    display:flex;
-    width:42px;
-    height:42px;
-    justify-content:center;
-    align-items:center;
-    font-size:30px;
-    cursor:pointer;
-}
-
-.hero{
-    height:32vh;
-    min-height:240px;
-    background-size:cover !important;
-    background-position:center center !important;
-    background-attachment:scroll;
-    padding-top:15px;
-}
-
-.hero-content{
-    width:92%;
-    padding:18px;
-    border-radius:18px;
-}
-
-.hero h1{
-    font-size:2.4rem;
-    line-height:1.15;
-}
-
-h2{
-    font-size:2rem;
-}
-
-h3{
-    font-size:1.45rem;
-}
-
-p,li{
-    font-size:1.05rem;
-}
-
-.intro,
-.about-intro,
-.about-story,
-.story,
-.cards,
-.shiatsu-session,
-.shiatsu-benefits,
-.yoga-gallery{
-    padding-left:18px !important;
-    padding-right:18px !important;
-}
-
-.cards,
-.session-steps,
-.benefits-grid,
-.diplomes-grid,
-.yoga-grid{
-    gap:22px;
-}
-
-.card,
-.dip-card,
-.step-card,
-.benefit-card{
-    border-radius:18px;
-}
-
-.card img{
-    height:240px;
-}
-
-.btn-small,
-.btn-read{
-    display:inline-block;
-    padding:14px 24px;
-    font-size:1rem;
-    border-radius:10px;
-}
-
-.home-layout{
-    grid-template-columns:1fr;
-    gap:25px;
-}
-
-.sidebar{
-    position:static;
-}
-
-.footer{
-    padding:35px 20px;
-}
-
-.footer-bottom .gingko{
-    display:none;
-}
-
-.mobile-menu{
-    position:fixed;
-    top:0;
-    right:-100%;
-    width:78%;
-    height:100vh;
-    background:#fff;
-    transition:.35s;
-    z-index:999;
-    padding:90px 30px;
-    box-shadow:-10px 0 30px rgba(0,0,0,.15);
-}
-
-.mobile-menu.open{
-    right:0;
-}
-
-.mobile-menu a{
-    display:block;
-    text-decoration:none;
-    color:#3a2f2a;
-    font-size:1.2rem;
-    margin:22px 0;
-}
-
-}
-
-@media (max-width:768px){
-
-html{font-size:18px;-webkit-text-size-adjust:100%;}
-body{font-size:1rem;line-height:1.75;}
-
-.navbar{padding:12px 18px;}
-.navbar ul{
-display:flex;
-overflow-x:auto;
-gap:16px;
-padding-bottom:6px;
--webkit-overflow-scrolling:touch;
-}
-.navbar ul::-webkit-scrollbar{display:none;}
-
-.hero{
-height:32vh;
-min-height:220px;
-background-size:cover!important;
-background-position:center!important;
-background-attachment:scroll;
-padding-top:20px;
-}
-
-.hero-content{
-width:92%;
-padding:18px;
-border-radius:18px;
-}
-
-.hero h1{font-size:2.3rem;}
-.hero p{font-size:1.05rem;}
-
-h2{font-size:2rem;}
-h3{font-size:1.45rem;}
-
-.cards,
-.home-layout,
-.intro,
-.about-intro,
-.about-story,
-.yoga-gallery,
-.shiatsu-session,
-.shiatsu-benefits{
-padding-left:18px!important;
-padding-right:18px!important;
-}
-
-.cards{gap:22px;}
-
-.card{
-border-radius:18px;
-}
-
-.card img{
-height:240px;
-}
-
-.btn-small,
-.btn-read{
-padding:14px 22px;
-font-size:1rem;
-border-radius:10px;
-}
-
-.home-layout{
-grid-template-columns:1fr;
-gap:25px;
-}
-
-.sidebar{
-position:static;
-}
-
-.footer{
-padding:35px 20px;
-}
-
-.footer-bottom .gingko{
-display:none;
-}
-
+/* ----------------------------------
+   20. ACCESSIBILITÉ
+---------------------------------- */
+a:focus-visible,
+button:focus-visible,
+.service-card:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 3px;
 }
