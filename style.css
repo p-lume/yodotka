@@ -1185,3 +1185,87 @@ p,li{
 }
 
 }
+
+@media (max-width:768px){
+
+html{font-size:18px;-webkit-text-size-adjust:100%;}
+body{font-size:1rem;line-height:1.75;}
+
+.navbar{padding:12px 18px;}
+.navbar ul{
+display:flex;
+overflow-x:auto;
+gap:16px;
+padding-bottom:6px;
+-webkit-overflow-scrolling:touch;
+}
+.navbar ul::-webkit-scrollbar{display:none;}
+
+.hero{
+height:32vh;
+min-height:220px;
+background-size:cover!important;
+background-position:center!important;
+background-attachment:scroll;
+padding-top:20px;
+}
+
+.hero-content{
+width:92%;
+padding:18px;
+border-radius:18px;
+}
+
+.hero h1{font-size:2.3rem;}
+.hero p{font-size:1.05rem;}
+
+h2{font-size:2rem;}
+h3{font-size:1.45rem;}
+
+.cards,
+.home-layout,
+.intro,
+.about-intro,
+.about-story,
+.yoga-gallery,
+.shiatsu-session,
+.shiatsu-benefits{
+padding-left:18px!important;
+padding-right:18px!important;
+}
+
+.cards{gap:22px;}
+
+.card{
+border-radius:18px;
+}
+
+.card img{
+height:240px;
+}
+
+.btn-small,
+.btn-read{
+padding:14px 22px;
+font-size:1rem;
+border-radius:10px;
+}
+
+.home-layout{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+.sidebar{
+position:static;
+}
+
+.footer{
+padding:35px 20px;
+}
+
+.footer-bottom .gingko{
+display:none;
+}
+
+}
