@@ -146,3 +146,60 @@ if (form) {
         }
     });
 }
+/* ---------- CARROUSEL ---------- */
+
+const slides = document.querySelectorAll(".carousel-slide");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+const nextBtn = document.querySelector(".carousel-btn.next");
+
+if (slides.length > 0 && prevBtn && nextBtn) {
+
+    let current = 0;
+
+    function showSlide(index){
+
+        slides.forEach(slide =>
+            slide.classList.remove("active")
+        );
+
+        slides[index].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", () => {
+
+        current++;
+
+        if(current >= slides.length){
+            current = 0;
+        }
+
+        showSlide(current);
+
+    });
+
+    prevBtn.addEventListener("click", () => {
+
+        current--;
+
+        if(current < 0){
+            current = slides.length - 1;
+        }
+
+        showSlide(current);
+
+    });
+
+    // Défilement automatique toutes les 5 secondes
+    setInterval(() => {
+
+        current++;
+
+        if(current >= slides.length){
+            current = 0;
+        }
+
+        showSlide(current);
+
+    },5000);
+
+}
