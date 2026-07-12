@@ -148,58 +148,47 @@ if (form) {
 }
 /* ---------- CARROUSEL ---------- */
 
-const slides = document.querySelectorAll(".carousel-slide");
-const prevBtn = document.querySelector(".carousel-btn.prev");
-const nextBtn = document.querySelector(".carousel-btn.next");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (slides.length > 0 && prevBtn && nextBtn) {
+    const slides = document.querySelectorAll(".carousel-slide");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
 
-    let current = 0;
+    if (!slides.length || !prev || !next) return;
 
-    function showSlide(index){
+    let index = 0;
+
+    function showSlide(i) {
 
         slides.forEach(slide =>
             slide.classList.remove("active")
         );
 
-        slides[index].classList.add("active");
+        slides[i].classList.add("active");
     }
 
-    nextBtn.addEventListener("click", () => {
+    prev.addEventListener("click", () => {
 
-        current++;
+        index = (index - 1 + slides.length) % slides.length;
 
-        if(current >= slides.length){
-            current = 0;
-        }
-
-        showSlide(current);
+        showSlide(index);
 
     });
 
-    prevBtn.addEventListener("click", () => {
+    next.addEventListener("click", () => {
 
-        current--;
+        index = (index + 1) % slides.length;
 
-        if(current < 0){
-            current = slides.length - 1;
-        }
-
-        showSlide(current);
+        showSlide(index);
 
     });
 
-    // Défilement automatique toutes les 5 secondes
     setInterval(() => {
 
-        current++;
+        index = (index + 1) % slides.length;
 
-        if(current >= slides.length){
-            current = 0;
-        }
+        showSlide(index);
 
-        showSlide(current);
+    }, 5000);
 
-    },5000);
-
-}
+});
