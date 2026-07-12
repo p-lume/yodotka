@@ -52,13 +52,7 @@ document.querySelectorAll(".service-card").forEach(card => {
 document.addEventListener("DOMContentLoaded", () => {
 
     const dates = [
-        "Samedi 4 juillet à 10h",
-        "Samedi 4 juillet à 14h",
-        "Samedi 4 juillet à 17h",
-
-        "Samedi 11 juillet à 10h",
-        "Samedi 11 juillet à 14h",
-        "Samedi 11 juillet à 17h",
+    
 
         "Samedi 18 juillet à 10h",
         "Samedi 18 juillet à 14h",
