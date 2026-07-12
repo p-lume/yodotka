@@ -1035,3 +1035,153 @@ h2 {
     transform: translateY(-2px);
 }
 
+/* ==========================================================================
+YODOTKA - AJOUTER CE BLOC A LA FIN DE TON style.css
+Optimisations mobiles uniquement : le rendu PC reste inchangé.
+========================================================================== */
+
+@media (max-width:768px){
+
+html{
+    font-size:18px;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    font-size:1rem;
+    line-height:1.75;
+}
+
+.navbar{
+    padding:12px 18px;
+    position:sticky;
+}
+
+.navbar ul{
+    display:none;
+}
+
+.menu-toggle{
+    display:flex;
+    width:42px;
+    height:42px;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.hero{
+    height:32vh;
+    min-height:240px;
+    background-size:cover !important;
+    background-position:center center !important;
+    background-attachment:scroll;
+    padding-top:15px;
+}
+
+.hero-content{
+    width:92%;
+    padding:18px;
+    border-radius:18px;
+}
+
+.hero h1{
+    font-size:2.4rem;
+    line-height:1.15;
+}
+
+h2{
+    font-size:2rem;
+}
+
+h3{
+    font-size:1.45rem;
+}
+
+p,li{
+    font-size:1.05rem;
+}
+
+.intro,
+.about-intro,
+.about-story,
+.story,
+.cards,
+.shiatsu-session,
+.shiatsu-benefits,
+.yoga-gallery{
+    padding-left:18px !important;
+    padding-right:18px !important;
+}
+
+.cards,
+.session-steps,
+.benefits-grid,
+.diplomes-grid,
+.yoga-grid{
+    gap:22px;
+}
+
+.card,
+.dip-card,
+.step-card,
+.benefit-card{
+    border-radius:18px;
+}
+
+.card img{
+    height:240px;
+}
+
+.btn-small,
+.btn-read{
+    display:inline-block;
+    padding:14px 24px;
+    font-size:1rem;
+    border-radius:10px;
+}
+
+.home-layout{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.sidebar{
+    position:static;
+}
+
+.footer{
+    padding:35px 20px;
+}
+
+.footer-bottom .gingko{
+    display:none;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:78%;
+    height:100vh;
+    background:#fff;
+    transition:.35s;
+    z-index:999;
+    padding:90px 30px;
+    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+}
+
+.mobile-menu.open{
+    right:0;
+}
+
+.mobile-menu a{
+    display:block;
+    text-decoration:none;
+    color:#3a2f2a;
+    font-size:1.2rem;
+    margin:22px 0;
+}
+
+}
