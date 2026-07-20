@@ -53,11 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dates = [
     
-
-        "Samedi 18 juillet à 10h",
-        "Samedi 18 juillet à 14h",
-        "Samedi 18 juillet à 17h",
-
         "Samedi 25 juillet à 10h",
         "Samedi 25 juillet à 14h",
         "Samedi 25 juillet à 17h",
