@@ -192,3 +192,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
 
 });
+/* ---------- POPUP DÉMÉNAGEMENT ---------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const popup = document.getElementById("movePopup");
+
+    if (!popup) return;
+
+    // Affiche la popup après 400 ms
+    setTimeout(() => {
+        popup.classList.add("show");
+    }, 400);
+
+    // Boutons de fermeture
+    popup.querySelector(".popup-btn").addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
+
+    popup.querySelector(".popup-close").addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
+
+    // Clic à l'extérieur
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("show");
+        }
+    });
+
+});
