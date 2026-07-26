@@ -53,65 +53,109 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dates = [
     
-        "Dimanche 26 juillet à 10h",
-        "Dimanche 26 juillet à 14h",
-        "Dimanche 26 juillet à 17h",
+     "Dimanche 26 juillet à 10h",
+"Dimanche 26 juillet à 14h",
+"Dimanche 26 juillet à 17h",
 
-        "Samedi 1 août à 10h",
-        "Samedi 1 août à 14h",
-        "Samedi 1 août à 17h",
+"Lundi 27 juillet à 10h",
+"Lundi 27 juillet à 14h",
+"Lundi 27 juillet à 17h",
 
-        "Samedi 8 août à 10h",
-        "Samedi 8 août à 14h",
-        "Samedi 8 août à 17h",
+"Mardi 28 juillet à 10h",
+"Mardi 28 juillet à 14h",
+"Mardi 28 juillet à 17h",
 
-        "Samedi 15 août à 10h",
-        "Samedi 15 août à 14h",
-        "Samedi 15 août à 17h",
+"Mercredi 29 juillet à 10h",
+"Mercredi 29 juillet à 14h",
+"Mercredi 29 juillet à 17h",
 
-        "Samedi 22 août à 10h",
-        "Samedi 22 août à 14h",
-        "Samedi 22 août à 17h",
+"Jeudi 30 juillet à 10h",
+"Jeudi 30 juillet à 14h",
+"Jeudi 30 juillet à 17h",
 
-        "Samedi 29 août à 10h",
-        "Samedi 29 août à 14h",
-        "Samedi 29 août à 17h",
+"Vendredi 31 juillet à 10h",
+"Vendredi 31 juillet à 14h",
+"Vendredi 31 juillet à 17h",
 
-        "Samedi 5 septembre à 10h",
-        "Samedi 5 septembre à 14h",
-        "Samedi 5 septembre à 17h",
+"Samedi 1 août à 10h",
+"Samedi 1 août à 14h",
+"Samedi 1 août à 17h",
 
-        "Samedi 12 septembre à 10h",
-        "Samedi 12 septembre à 14h",
-        "Samedi 12 septembre à 17h",
+"Dimanche 2 août à 10h",
+"Dimanche 2 août à 14h",
+"Dimanche 2 août à 17h",
 
-        "Samedi 19 septembre à 10h",
-        "Samedi 19 septembre à 14h",
-        "Samedi 19 septembre à 17h",
+"Samedi 8 août à 10h",
+"Samedi 8 août à 14h",
+"Samedi 8 août à 17h",
 
-        "Samedi 26 septembre à 10h",
-        "Samedi 26 septembre à 14h",
-        "Samedi 26 septembre à 17h",
+"Dimanche 9 août à 10h",
+"Dimanche 9 août à 14h",
+"Dimanche 9 août à 17h",
 
-        "Samedi 3 octobre à 10h",
-        "Samedi 3 octobre à 14h",
-        "Samedi 3 octobre à 17h",
+"Samedi 15 août à 10h",
+"Samedi 15 août à 14h",
+"Samedi 15 août à 17h",
 
-        "Samedi 10 octobre à 10h",
-        "Samedi 10 octobre à 14h",
-        "Samedi 10 octobre à 17h",
+"Dimanche 16 août à 10h",
+"Dimanche 16 août à 14h",
+"Dimanche 16 août à 17h",
 
-        "Samedi 17 octobre à 10h",
-        "Samedi 17 octobre à 14h",
-        "Samedi 17 octobre à 17h",
+"Samedi 22 août à 10h",
+"Samedi 22 août à 14h",
+"Samedi 22 août à 17h",
 
-        "Samedi 24 octobre à 10h",
-        "Samedi 24 octobre à 14h",
-        "Samedi 24 octobre à 17h",
+"Dimanche 23 août à 10h",
+"Dimanche 23 août à 14h",
+"Dimanche 23 août à 17h",
 
-        "Samedi 31 octobre à 10h",
-        "Samedi 31 octobre à 14h",
-        "Samedi 31 octobre à 17h"
+"Samedi 29 août à 10h",
+"Samedi 29 août à 14h",
+"Samedi 29 août à 17h",
+
+"Dimanche 30 août à 10h",
+"Dimanche 30 août à 14h",
+"Dimanche 30 août à 17h",
+
+"Samedi 5 septembre à 10h",
+"Samedi 5 septembre à 14h",
+"Samedi 5 septembre à 17h",
+
+"Dimanche 6 septembre à 10h",
+"Dimanche 6 septembre à 14h",
+"Dimanche 6 septembre à 17h",
+
+"Samedi 12 septembre à 10h",
+"Samedi 12 septembre à 14h",
+"Samedi 12 septembre à 17h",
+
+"Dimanche 13 septembre à 10h",
+"Dimanche 13 septembre à 14h",
+"Dimanche 13 septembre à 17h",
+
+"Samedi 19 septembre à 10h",
+"Samedi 19 septembre à 14h",
+"Samedi 19 septembre à 17h",
+
+"Dimanche 20 septembre à 10h",
+"Dimanche 20 septembre à 14h",
+"Dimanche 20 septembre à 17h",
+
+"Samedi 26 septembre à 10h",
+"Samedi 26 septembre à 14h",
+"Samedi 26 septembre à 17h",
+
+"Dimanche 27 septembre à 10h",
+"Dimanche 27 septembre à 14h",
+"Dimanche 27 septembre à 17h",
+
+"Samedi 3 octobre à 10h",
+"Samedi 3 octobre à 14h",
+"Samedi 3 octobre à 17h",
+
+"Dimanche 4 octobre à 10h",
+"Dimanche 4 octobre à 14h",
+"Dimanche 4 octobre à 17h",
     ];
 
     const dateSelect = document.getElementById("date");
