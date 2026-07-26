@@ -65,8 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
 "Mardi 28 juillet à 14h",
 "Mardi 28 juillet à 17h",
 
-"Mercredi 29 juillet à 10h",
-"Mercredi 29 juillet à 14h",
 "Mercredi 29 juillet à 17h",
 
 "Jeudi 30 juillet à 10h",
