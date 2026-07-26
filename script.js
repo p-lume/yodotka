@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 "Dimanche 26 juillet à 14h",
 "Dimanche 26 juillet à 17h",
 
-"Lundi 27 juillet à 10h",
+
 "Lundi 27 juillet à 14h",
 "Lundi 27 juillet à 17h",
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 "Mardi 28 juillet à 14h",
 "Mardi 28 juillet à 17h",
 
-"Mercredi 29 juillet à 17h",
+
 
 "Jeudi 30 juillet à 10h",
 "Jeudi 30 juillet à 14h",
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 "Samedi 1 août à 10h",
 "Samedi 1 août à 14h",
-"Samedi 1 août à 17h",
+
 
 "Dimanche 2 août à 10h",
 "Dimanche 2 août à 14h",
