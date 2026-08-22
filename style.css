@@ -1180,52 +1180,91 @@ button:focus-visible,
         transform:translateY(0) scale(1);
     }
 }
-/* ==========================
-   MENU BURGER SMARTPHONE
-========================== */
+/* ======================================
+   MENU BURGER PREMIUM — MOBILE UNIQUEMENT
+====================================== */
+
+.menu-toggle,
+.mobile-menu{
+    display:none;
+}
 
 @media (max-width:768px){
 
+    /* menu desktop masqué */
     .nav-links{
         display:none !important;
     }
 
+    /* barre */
+    .navbar{
+        padding:14px 18px;
+        height:72px;
+    }
+
+    .logo{
+        font-size:1.35rem;
+        letter-spacing:1.5px;
+    }
+
+    /* icône burger */
     .menu-toggle{
         display:flex;
         align-items:center;
         justify-content:center;
-        width:42px;
-        height:42px;
-        font-size:32px;
-        cursor:pointer;
+        width:44px;
+        height:44px;
+        font-size:30px;
         color:var(--terracotta);
-        z-index:1001;
+        cursor:pointer;
+        border-radius:50%;
+        transition:background .25s ease, transform .2s ease;
+        z-index:1002;
     }
 
+    .menu-toggle:active{
+        transform:scale(.95);
+        background:rgba(217,122,79,.08);
+    }
+
+    /* panneau latéral */
     .mobile-menu{
         display:flex;
         flex-direction:column;
         position:fixed;
         top:0;
         right:-100%;
-        width:82%;
-        height:100vh;
-        background:#fff;
-        padding:90px 35px;
-        gap:22px;
-        transition:right .35s ease;
-        box-shadow:-8px 0 30px rgba(0,0,0,.18);
-        z-index:1000;
+        width:min(82vw,340px);
+        height:100dvh;
+        background:rgba(255,255,255,.97);
+        backdrop-filter:blur(14px);
+        -webkit-backdrop-filter:blur(14px);
+        padding:90px 28px 40px;
+        gap:6px;
+        transition:right .38s cubic-bezier(.22,1,.36,1);
+        box-shadow:-12px 0 40px rgba(0,0,0,.15);
+        z-index:1001;
+        overflow-y:auto;
     }
 
     .mobile-menu.open{
         right:0;
     }
 
+    /* liens */
     .mobile-menu a{
         text-decoration:none;
-        color:#3a2f2a;
-        font-size:1.2rem;
+        color:var(--ink);
+        font-size:clamp(1rem,1.8vw + .8rem,1.15rem);
         font-weight:500;
+        padding:14px 4px;
+        border-bottom:1px solid rgba(0,0,0,.06);
+        transition:color .25s ease, padding-left .25s ease;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:active{
+        color:var(--terracotta);
+        padding-left:10px;
     }
 }
