@@ -1,4 +1,4 @@
-/* ==================================================================
+/* ======================================================
    YODOTKA — STYLE PREMIUM
    Refonte du fichier d'origine : mêmes classes, mêmes images,
    système de tokens, ombres corrigées, micro-interactions affinées.
@@ -122,6 +122,12 @@ h3 {
 
 .logo span {
     color: var(--terracotta);
+}
+
+/* Masqué sur ordinateur */
+.menu-toggle,
+.mobile-menu {
+    display: none;
 }
 
 .navbar ul {
@@ -1178,10 +1184,6 @@ button:focus-visible,
    MENU BURGER SMARTPHONE
 ========================== */
 
-.menu-toggle{
-    display:none;
-}
-
 @media (max-width:768px){
 
     .nav-links{
@@ -1192,6 +1194,8 @@ button:focus-visible,
         display:flex;
         align-items:center;
         justify-content:center;
+        width:42px;
+        height:42px;
         font-size:32px;
         cursor:pointer;
         color:var(--terracotta);
@@ -1199,6 +1203,8 @@ button:focus-visible,
     }
 
     .mobile-menu{
+        display:flex;
+        flex-direction:column;
         position:fixed;
         top:0;
         right:-100%;
@@ -1206,8 +1212,6 @@ button:focus-visible,
         height:100vh;
         background:#fff;
         padding:90px 35px;
-        display:flex;
-        flex-direction:column;
         gap:22px;
         transition:right .35s ease;
         box-shadow:-8px 0 30px rgba(0,0,0,.18);
