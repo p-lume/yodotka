@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Accueil – YODOTKA</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre rendez-vous – YODOTKA</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
- <!-- NAVIGATION -->
- <nav class="navbar">
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
 
     <div class="logo">YODOT<span>KA</span></div>
 
-    <!-- Menu ordinateur -->
+    <!-- MENU ORDINATEUR -->
     <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="shiatsu.html">Shiatsu</a></li>
-        <li><a href="kobido.html">Kobido</a></li>
-        <li><a href="yoga.html">Yoga</a></li>
-        <li><a href="rdv.html">Prendre RDV</a></li>
-        <li><a href="aboutme.html">À propos</a></li>
-        <li><a href="articles.html">Articles</a></li>
+
+        <li>
+            <a href="index.html">Accueil</a>
+        </li>
+
+        <li>
+            <a href="shiatsu.html">Shiatsu</a>
+        </li>
+
+        <li>
+            <a href="kobido.html">Kobido</a>
+        </li>
+
+        <li>
+            <a href="yoga.html">Yoga</a>
+        </li>
+
+        <li>
+            <a href="rdv.html" class="active">Prendre RDV</a>
+        </li>
+
+        <li>
+            <a href="aboutme.html">À propos</a>
+        </li>
+
+        <li>
+            <a href="articles.html">Articles</a>
+        </li>
+
     </ul>
 
-    <!-- Icône burger -->
-    <div class="menu-toggle" id="menuToggle">☰</div>
 
-    <!-- Menu smartphone -->
+    <!-- BOUTON BURGER -->
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
+
+
+    <!-- MENU SMARTPHONE -->
     <div class="mobile-menu" id="mobileMenu">
+
         <a href="index.html">Accueil</a>
         <a href="shiatsu.html">Shiatsu</a>
         <a href="kobido.html">Kobido</a>
@@ -38,132 +72,570 @@
         <a href="rdv.html">Prendre RDV</a>
         <a href="aboutme.html">À propos</a>
         <a href="articles.html">Articles</a>
+
     </div>
 
 </nav>
-<!-- HERO -->
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <header class="hero">
+
     <div class="hero-content fade-up">
+
         <h1>Prendre rendez-vous</h1>
-        <p>Un moment de soin, de calme et d'équilibre.</p>
+
+        <p>
+            Un moment de soin, de calme et d'équilibre.
+        </p>
+
     </div>
+
 </header>
 
-<!-- SECTION RDV -->
+
+
+<!-- =====================================================
+     SECTION RÉSERVATION
+===================================================== -->
+
 <section class="resa">
 
     <h2>Réserver un soin</h2>
 
-    <!-- CHOIX DU SOIN -->
-    <div class="service-grid">
-        <div class="service-card" data-value="kobido_30">
-            <h3>Kobido express</h3>
-            <p>30 min — 50 €</p>
-        </div>
 
-        <div class="service-card" data-value="kobido_60">
-            <h3>Kobido</h3>
-            <p>60 min — 70 €</p>
-        </div>
+    <!-- INTRODUCTION -->
 
-        <div class="service-card" data-value="shiatsu_90">
-            <h3>Shiatsu</h3>
-            <p>75 min — 80 €</p>
-        </div>
+    <div class="booking-intro">
 
-        <div class="service-card" data-value="yoga_60">
-            <h3>Yoga</h3>
-            <p>sur demande</p>
-        </div>
+        <span class="booking-eyebrow">
+            VOTRE MOMENT DE BIEN-ÊTRE
+        </span>
+
+        <p>
+            Choisissez votre soin pour accéder directement
+            à la réservation.
+        </p>
+
     </div>
 
-    <!-- FORMULAIRE -->
-    <form action="https://formsubmit.co/e8beb611dfc227ee5c1436d852224d18" method="POST">
 
-        <!-- Configuration FormSubmit -->
-        <input type="hidden" name="_subject" value="Nouvelle réservation YODOTKA">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
 
-        <!-- Redirection après envoi -->
-        <input type="hidden" name="_next" value="https://yodotka.fr/merci.html">
+    <!-- =================================================
+         CHOIX DU SOIN
+    ================================================== -->
 
-        <!-- Email automatique envoyé au client -->
-        <input type="hidden" name="_autoresponse" value="Merci d'avoir réservé chez YODOTKA. Votre demande a bien été reçue. Nous vous recontacterons sous 24 heures afin de confirmer votre créneau.">
+    <div class="service-grid" id="serviceGrid">
 
-        <!-- Champ caché pour le soin -->
-        <input type="hidden" name="Prestation sélectionnée" id="service">
 
-        <label>Nom :</label>
-        <input type="text" name="Nom" required>
+        <!-- KOBIDO EXPRESS -->
 
-        <label>Prénom :</label>
-        <input type="text" name="Prénom" required>
+        <div
+            class="service-card"
+            data-value="kobido_30"
+            tabindex="0"
+        >
 
-        <label>Email :</label>
-        <input type="email" name="Email du client" required>
+            <span class="service-number">
+                01
+            </span>
 
-        <label>Date :</label>
-        <select id="date" name="Date choisie" required>
-            <option value="">Choisir une date</option>
-        </select>
+            <h3>
+                Kobido express
+            </h3>
 
-        <button type="submit" class="btn">Réserver</button>
+            <p>
+                30 min <span>—</span> 50 €
+            </p>
 
-    </form>
+        </div>
 
-    <p>
-        Les paiements se font en chèque, espèces ou virement (Wero possible).
-        Yodotka émet des factures sur demande.
-        Politique d'annulation : gratuit jusqu'à 24h avant le soin.
-        Moins de 24h avant : 50 % ou reprogrammation selon la situation sur appel.
+
+
+        <!-- KOBIDO -->
+
+        <div
+            class="service-card"
+            data-value="kobido_60"
+            tabindex="0"
+        >
+
+            <span class="service-number">
+                02
+            </span>
+
+            <h3>
+                Kobido
+            </h3>
+
+            <p>
+                60 min <span>—</span> 70 €
+            </p>
+
+        </div>
+
+
+
+        <!-- SHIATSU -->
+
+        <div
+            class="service-card"
+            data-value="shiatsu_75"
+            tabindex="0"
+        >
+
+            <span class="service-number">
+                03
+            </span>
+
+            <h3>
+                Shiatsu
+            </h3>
+
+            <p>
+                75 min <span>—</span> 80 €
+            </p>
+
+        </div>
+
+
+
+        <!-- YOGA -->
+
+        <div
+            class="service-card"
+            data-value="yoga_60"
+            tabindex="0"
+        >
+
+            <span class="service-number">
+                04
+            </span>
+
+            <h3>
+                Yoga
+            </h3>
+
+            <p>
+                Sur demande
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FORMULAIRE
+    ================================================== -->
+
+    <div
+        class="booking-form-wrapper"
+        id="bookingFormWrapper"
+    >
+
+
+        <!-- TITRE DU FORMULAIRE -->
+
+        <div class="form-heading">
+
+            <span class="booking-eyebrow">
+                VOTRE RÉSERVATION
+            </span>
+
+            <h2>
+                Choisissez votre moment
+            </h2>
+
+            <p class="form-selected">
+
+                Votre sélection :
+
+                <strong id="selectedService">
+                    —
+                </strong>
+
+            </p>
+
+        </div>
+
+
+
+        <!-- FORMULAIRE FORMSUBMIT -->
+
+        <form
+            id="rdvForm"
+            action="https://formsubmit.co/e8beb611dfc227ee5c1436d852224d18"
+            method="POST"
+        >
+
+
+            <!-- CONFIGURATION FORMSUBMIT -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nouvelle réservation YODOTKA"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+
+            <!-- PAGE APRÈS ENVOI -->
+
+            <input
+                type="hidden"
+                name="_next"
+                value="https://yodotka.fr/merci.html"
+            >
+
+
+            <!-- EMAIL AUTOMATIQUE AU CLIENT -->
+
+            <input
+                type="hidden"
+                name="_autoresponse"
+                value="Merci d'avoir réservé chez YODOTKA. Votre demande a bien été reçue. Nous vous recontacterons sous 24 heures afin de confirmer votre créneau."
+            >
+
+
+            <!-- SOIN SÉLECTIONNÉ -->
+
+            <input
+                type="hidden"
+                name="Prestation sélectionnée"
+                id="service"
+            >
+
+
+
+            <!-- =========================================
+                 NOM
+            ========================================== -->
+
+            <div class="form-field">
+
+                <label for="nom">
+                    Nom
+                </label>
+
+                <input
+                    type="text"
+                    id="nom"
+                    name="Nom"
+                    placeholder="Votre nom"
+                    autocomplete="family-name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- =========================================
+                 PRÉNOM
+            ========================================== -->
+
+            <div class="form-field">
+
+                <label for="prenom">
+                    Prénom
+                </label>
+
+                <input
+                    type="text"
+                    id="prenom"
+                    name="Prénom"
+                    placeholder="Votre prénom"
+                    autocomplete="given-name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- =========================================
+                 EMAIL
+            ========================================== -->
+
+            <div class="form-field">
+
+                <label for="email">
+                    Adresse email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="Email du client"
+                    placeholder="votre@email.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- =========================================
+                 DATE
+            ========================================== -->
+
+            <div class="form-field">
+
+                <label for="date">
+                    Votre créneau
+                </label>
+
+                <select
+                    id="date"
+                    name="Date choisie"
+                    required
+                >
+
+                    <option value="">
+                        Choisir une date et une heure
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 BOUTON
+            ========================================== -->
+
+            <button
+                type="submit"
+                class="btn btn-book"
+            >
+
+                Confirmer ma demande
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+
+    <!-- =================================================
+         INFORMATIONS
+    ================================================== -->
+
+    <p class="booking-information">
+
+        Les paiements se font en chèque, espèces ou virement
+        (Wero possible).
+
+        YODOTKA émet des factures sur demande.
+
+        <br><br>
+
+        <strong>Politique d'annulation :</strong>
+        gratuit jusqu'à 24 h avant le soin.
+
+        <br>
+
+        Moins de 24 h avant :
+        50 % ou reprogrammation selon la situation,
+        sur appel.
+
     </p>
 
+
+
+    <!-- =================================================
+         RÉSERVATION PAR SMS
+    ================================================== -->
+
     <div class="sms-rdv">
-    <p>Vous préférez réserver directement ?</p>
-    <a href="sms:+33651471750" class="btn-sms">
-        📱 Prendre RDV par SMS
-    </a>
-    <span>06 51 47 17 50</span>
-</div>
+
+        <p>
+            Vous préférez réserver directement ?
+        </p>
+
+
+        <a
+            href="sms:+33651471750"
+            class="btn-sms"
+        >
+
+            📱 Prendre RDV par SMS
+
+        </a>
+
+
+        <span>
+            06 51 47 17 50
+        </span>
+
+    </div>
+
+
 </section>
 
- <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
 
-            <div class="footer-col">
-                <h4>YODOTKA</h4>
-                <p>Bien‑être, shiatsu, kobido, yoga et pratiques naturelles en Île‑de‑France.</p>
-            </div>
 
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="shiatsu.html">Shiatsu</a></li>
-                    <li><a href="kobido.html">Kobido</a></li>
-                    <li><a href="yoga.html">Yoga</a></li>
-                    <li><a href="aboutme.html">À propos</a></li>
-                    <li><a href="rdv.html">Prendre RDV</a></li>
-                </ul>
-            </div>
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>35 rue Guy le Rouge, 78730 Rochefort-en-Yvelines, France</p>
-                <p>Email : <a href="mailto:marikaawuhan@yahoo.fr">Contactez moi par mail:marikaawuhan@yahoo.fr</a></p>
-            </div> 
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <!-- COLONNE 1 -->
+
+        <div class="footer-col">
+
+            <h4>
+                YODOTKA
+            </h4>
+
+            <p>
+                Bien-être, shiatsu, kobido, yoga et pratiques
+                naturelles en Île-de-France.
+            </p>
 
         </div>
 
-        <div class="footer-bottom">
-                     <img src="img/gingko.svg" class="gingko g1">
-            <p>© 2026 YODOTKA – Tous droits réservés</p>
-             <img src="img/gingko.svg" class="gingko g2">
+
+
+        <!-- COLONNE 2 -->
+
+        <div class="footer-col">
+
+            <h4>
+                Navigation
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shiatsu.html">
+                        Shiatsu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kobido.html">
+                        Kobido
+                    </a>
+                </li>
+
+                <li>
+                    <a href="yoga.html">
+                        Yoga
+                    </a>
+                </li>
+
+                <li>
+                    <a href="aboutme.html">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="rdv.html">
+                        Prendre RDV
+                    </a>
+                </li>
+
+            </ul>
+
         </div>
 
-    </footer>
+
+
+        <!-- COLONNE 3 -->
+
+        <div class="footer-col">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                35 rue Guy le Rouge<br>
+                78730 Rochefort-en-Yvelines<br>
+                France
+            </p>
+
+            <p>
+                Email :
+                <a href="mailto:marikaawuhan@yahoo.fr">
+                    Contactez-moi par mail
+                </a>
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <img
+            src="img/gingko.svg"
+            class="gingko g1"
+            alt=""
+        >
+
+        <p>
+            © 2026 YODOTKA – Tous droits réservés
+        </p>
+
+        <img
+            src="img/gingko.svg"
+            class="gingko g2"
+            alt=""
+        >
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script src="script.js"></script>
 
