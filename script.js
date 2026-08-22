@@ -217,3 +217,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+/* MENU BURGER */
+
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("mobileMenu");
+
+if (toggle && menu){
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        toggle.textContent = menu.classList.contains("open") ? "✕" : "☰";
+    });
+
+    menu.querySelectorAll("a").forEach(link=>{
+        link.addEventListener("click", ()=>{
+            menu.classList.remove("open");
+            toggle.textContent="☰";
+        });
+    });
+
+}
