@@ -2557,3 +2557,197 @@ button:focus-visible,
         padding: 14px 20px;
     }
 }
+/* =========================================
+   VIDÉO SHIATSU - PREMIUM
+========================================= */
+
+.shiatsu-video-section {
+    width: 100%;
+    padding: 70px 5vw 90px;
+}
+
+.shiatsu-video-wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Cadre principal */
+
+.shiatsu-video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    border-radius: 4px 4px 70px 4px;
+
+    background: #171511;
+
+    box-shadow:
+        0 25px 60px rgba(30, 25, 18, 0.16),
+        0 8px 20px rgba(30, 25, 18, 0.08);
+}
+
+/* Petit cadre décoratif derrière la vidéo */
+
+.shiatsu-video-frame::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    inset: 18px -18px -18px 18px;
+
+    border: 1px solid rgba(130, 105, 72, 0.25);
+
+    border-radius: 4px 4px 70px 4px;
+}
+
+/* Vidéo */
+
+.shiatsu-video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transform: scale(1.015);
+}
+
+/* Voile très léger pour donner un rendu cinématographique */
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(20, 16, 11, 0.02) 35%,
+            rgba(20, 16, 11, 0.28) 100%
+        );
+
+    pointer-events: none;
+}
+
+/* Texte intégré */
+
+.video-caption {
+    position: absolute;
+    left: 42px;
+    bottom: 35px;
+
+    color: white;
+
+    z-index: 2;
+
+    max-width: 380px;
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.video-caption span {
+    display: block;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.28em;
+
+    margin-bottom: 9px;
+
+    opacity: 0.85;
+}
+
+.video-caption p {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(18px, 2vw, 27px);
+    line-height: 1.3;
+    font-style: italic;
+}
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .shiatsu-video-section {
+        padding: 55px 5vw 70px;
+    }
+
+    .shiatsu-video-frame {
+        border-radius: 4px 4px 45px 4px;
+    }
+
+    .shiatsu-video-frame::before {
+        inset: 12px -12px -12px 12px;
+        border-radius: 4px 4px 45px 4px;
+    }
+
+    .video-caption {
+        left: 28px;
+        bottom: 25px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .shiatsu-video-section {
+        padding: 35px 20px 55px;
+    }
+
+    .shiatsu-video-frame {
+        aspect-ratio: 4 / 5;
+
+        border-radius: 3px 3px 38px 3px;
+    }
+
+    .shiatsu-video-frame::before {
+        inset: 9px -9px -9px 9px;
+
+        border-radius: 3px 3px 38px 3px;
+    }
+
+    .shiatsu-video {
+        object-position: center center;
+        transform: scale(1.02);
+    }
+
+    .video-caption {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+    .video-caption span {
+        font-size: 9px;
+        letter-spacing: 0.22em;
+    }
+
+    .video-caption p {
+        font-size: 19px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITÉ / PERFORMANCE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .shiatsu-video {
+        animation: none;
+    }
+}
