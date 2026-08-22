@@ -2347,3 +2347,12 @@ button:focus-visible,
     }
 
 }
+/* ======================================
+   HERO — MASQUER LES BOUTONS SUR MOBILE
+====================================== */
+
+@media (max-width: 768px) {
+    .hero-actions {
+        display: none !important;
+    }
+}
