@@ -31,22 +31,89 @@ if (btn && story) {
 }
 
 
-/* --- Sélection du soin --- */
-document.querySelectorAll(".service-card").forEach(card => {
-    card.addEventListener("click", () => {
+/* =========================================================
+   SÉLECTION DU SOIN + DESCENTE AUTOMATIQUE
+========================================================= */
 
-        document.querySelectorAll(".service-card")
-            .forEach(c => c.classList.remove("active"));
+document.addEventListener("DOMContentLoaded", () => {
 
-        card.classList.add("active");
+    const cards = document.querySelectorAll(".service-card");
+    const serviceGrid = document.getElementById("serviceGrid");
+    const formWrapper = document.getElementById("bookingFormWrapper");
+    const serviceInput = document.getElementById("service");
+    const selectedService = document.getElementById("selectedService");
 
-        const serviceInput = document.getElementById("service");
-        if (serviceInput) {
-            serviceInput.value = card.dataset.value;
+    if (!cards.length || !formWrapper) return;
+
+    cards.forEach(card => {
+
+        function selectService() {
+
+            /* retirer la sélection précédente */
+            cards.forEach(c => {
+                c.classList.remove("active");
+            });
+
+            /* sélectionner */
+            card.classList.add("active");
+
+            /* griser les autres */
+            serviceGrid.classList.add("has-selection");
+
+            /* valeur FormSubmit */
+            if (serviceInput) {
+                serviceInput.value = card.dataset.value;
+            }
+
+            /* nom affiché dans le formulaire */
+            if (selectedService) {
+                selectedService.textContent =
+                    card.querySelector("h3").textContent;
+            }
+
+            /* faire apparaître le formulaire */
+            formWrapper.classList.add("visible");
+
+            /*
+             * Petit délai pour laisser l'animation démarrer,
+             * puis déplacement doux vers le formulaire.
+             */
+            setTimeout(() => {
+
+                const offset = 100;
+
+                const top =
+                    formWrapper.getBoundingClientRect().top +
+                    window.scrollY -
+                    offset;
+
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth"
+                });
+
+            }, 180);
         }
-    });
-});
 
+        /* clic souris / doigt */
+        card.addEventListener("click", selectService);
+
+        /* clavier : Entrée ou espace */
+        card.addEventListener("keydown", event => {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+                event.preventDefault();
+                selectService();
+            }
+
+        });
+
+    });
+
+});
 
 /* --- Dates disponibles --- */
 document.addEventListener("DOMContentLoaded", () => {
