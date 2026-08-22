@@ -2356,3 +2356,204 @@ button:focus-visible,
         display: none !important;
     }
 }
+/* =========================================================
+   AVIS GOOGLE — ON PARLE DE NOUS
+   ========================================================= */
+
+.reviews-home {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 90px;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+/* En-tête */
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.reviews-subtitle {
+    margin: 0 0 8px;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.65;
+}
+
+.reviews-header h2 {
+    margin: 0 0 14px;
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.reviews-intro {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    opacity: 0.75;
+}
+
+/* Note Google */
+
+.google-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.google-stars {
+    font-size: 1.15rem;
+    letter-spacing: 3px;
+}
+
+.google-text {
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+/* Grille des avis */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Carte */
+
+.review-card {
+    position: relative;
+    padding: 32px 30px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 4px;
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Etoiles */
+
+.review-stars {
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+}
+
+/* Texte */
+
+.review-text {
+    margin: 0 0 25px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* Auteur */
+
+.review-author {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    font-size: 0.82rem;
+}
+
+.review-author strong {
+    font-weight: 500;
+}
+
+.review-author span {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* Bouton Google */
+
+.reviews-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.btn-google-reviews {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 25px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-google-reviews:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .reviews-home {
+        margin: 55px auto 65px;
+        padding: 0 18px;
+    }
+
+    .reviews-header {
+        margin-bottom: 30px;
+    }
+
+    .reviews-header h2 {
+        font-size: 2rem;
+    }
+
+    .reviews-intro {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .review-card {
+        padding: 25px 22px;
+    }
+
+    .review-text {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .reviews-footer {
+        margin-top: 28px;
+    }
+
+    .btn-google-reviews {
+        width: 100%;
+        max-width: 330px;
+        padding: 14px 20px;
+    }
+}
