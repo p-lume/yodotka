@@ -53,51 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dates = [
     
-     "Dimanche 26 juillet à 10h",
-"Dimanche 26 juillet à 14h",
-"Dimanche 26 juillet à 17h",
+   
 
 
-"Lundi 27 juillet à 14h",
-"Lundi 27 juillet à 17h",
-
-"Mardi 28 juillet à 10h",
-"Mardi 28 juillet à 14h",
-"Mardi 28 juillet à 17h",
-
-
-
-"Jeudi 30 juillet à 10h",
-"Jeudi 30 juillet à 14h",
-"Jeudi 30 juillet à 17h",
-
-"Vendredi 31 juillet à 10h",
-"Vendredi 31 juillet à 14h",
-"Vendredi 31 juillet à 17h",
-
-"Samedi 1 août à 10h",
-"Samedi 1 août à 14h",
-
-
-"Dimanche 2 août à 10h",
-"Dimanche 2 août à 14h",
-"Dimanche 2 août à 17h",
-
-"Samedi 8 août à 10h",
-"Samedi 8 août à 14h",
-"Samedi 8 août à 17h",
-
-"Dimanche 9 août à 10h",
-"Dimanche 9 août à 14h",
-"Dimanche 9 août à 17h",
-
-"Samedi 15 août à 10h",
-"Samedi 15 août à 14h",
-"Samedi 15 août à 17h",
-
-"Dimanche 16 août à 10h",
-"Dimanche 16 août à 14h",
-"Dimanche 16 août à 17h",
 
 "Samedi 22 août à 10h",
 "Samedi 22 août à 14h",
