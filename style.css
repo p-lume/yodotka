@@ -1457,3 +1457,893 @@ button:focus-visible,
         text-align:center;
     }
 }
+/* =========================================================
+   RÉSERVATION — EXPÉRIENCE PREMIUM
+========================================================= */
+
+.resa {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+/* Introduction */
+
+.booking-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.booking-eyebrow {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.booking-intro p {
+    color: #766c65;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   CARTES DE SOINS
+========================================================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    position: relative;
+    min-height: 170px;
+    padding: 28px 20px;
+    background: #fff;
+    border: 1px solid rgba(36,29,25,.08);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(36,29,25,.06);
+    cursor: pointer;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition:
+        transform .45s var(--ease-premium),
+        box-shadow .45s var(--ease-premium),
+        opacity .45s ease,
+        filter .45s ease,
+        border-color .45s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(36,29,25,.12);
+}
+
+.service-card h3 {
+    margin: 15px 0 8px;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    margin: 0;
+    color: #81766e;
+    font-size: .9rem;
+}
+
+.service-card p span {
+    color: var(--gold);
+}
+
+.service-number {
+    position: absolute;
+    top: 14px;
+    left: 17px;
+
+    font-size: .65rem;
+    letter-spacing: 2px;
+    color: #c7b8aa;
+}
+
+
+/* Carte sélectionnée */
+
+.service-card.active {
+    border-color: var(--terracotta);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(217,122,79,.20);
+}
+
+.service-card.active::after {
+    content: "✓";
+    position: absolute;
+    top: 14px;
+    right: 17px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--terracotta);
+    color: white;
+    border-radius: 50%;
+    font-size: .7rem;
+}
+
+
+/* =========================================================
+   QUAND UN SOIN EST SÉLECTIONNÉ
+========================================================= */
+
+.service-grid.has-selection .service-card:not(.active) {
+    opacity: .30;
+    filter: grayscale(100%);
+    transform: scale(.97);
+}
+
+.service-grid.has-selection .service-card.active {
+    opacity: 1;
+    filter: none;
+}
+
+
+/* =========================================================
+   FORMULAIRE
+========================================================= */
+
+.booking-form-wrapper {
+    position: relative;
+
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 55px 60px 60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff 0%,
+            #fcf8f4 100%
+        );
+
+    border: 1px solid rgba(212,168,106,.22);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(36,29,25,.10),
+        0 2px 8px rgba(36,29,25,.04);
+
+    /* caché au départ */
+    opacity: 0;
+    transform: translateY(35px);
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        opacity .7s var(--ease-premium),
+        transform .7s var(--ease-premium),
+        max-height .8s var(--ease-premium),
+        margin .7s var(--ease-premium);
+}
+
+
+/* formulaire révélé */
+
+.booking-form-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+    margin-top: 20px;
+}
+
+
+/* petite ligne décorative */
+
+.booking-form-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70px;
+    height: 2px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   TITRE FORMULAIRE
+========================================================= */
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.form-heading h2 {
+    margin: 5px 0 12px;
+    font-size: 2.1rem;
+}
+
+.form-selected {
+    display: inline-block;
+
+    margin: 0;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(217,122,79,.07);
+
+    color: #7b6c62;
+
+    font-size: .85rem;
+}
+
+.form-selected strong {
+    color: var(--terracotta);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CHAMPS
+========================================================= */
+
+.form-field {
+    margin-bottom: 22px;
+}
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+
+    color: #665a52;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 17px;
+
+    background: rgba(255,255,255,.85);
+
+    border: 1px solid rgba(36,29,25,.12);
+    border-radius: 10px;
+
+    color: var(--ink);
+
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+
+    outline: none;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.form-field input::placeholder {
+    color: #b4aaa2;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    background: white;
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 4px rgba(212,168,106,.10);
+}
+
+
+/* =========================================================
+   BOUTON
+========================================================= */
+
+.btn-book {
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 16px 25px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: var(--terracotta);
+    color: white;
+
+    font-family: 'Inter', sans-serif;
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 28px rgba(217,122,79,.25);
+
+    transition:
+        transform .35s var(--ease-premium),
+        box-shadow .35s var(--ease-premium),
+        background .3s ease;
+}
+
+.btn-book span {
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-book:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px rgba(217,122,79,.30);
+}
+
+
+/* =========================================================
+   TEXTE SOUS FORMULAIRE
+========================================================= */
+
+.resa > p {
+    max-width: 700px;
+    margin: 35px auto;
+
+    text-align: center;
+
+    font-size: .82rem;
+    line-height: 1.8;
+
+    color: #8a7d74;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .resa {
+        padding: 65px 18px;
+    }
+
+    .booking-intro {
+        margin-bottom: 30px;
+    }
+
+    .booking-intro p {
+        font-size: .95rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .service-card {
+        min-height: 145px;
+        padding: 25px 12px;
+        border-radius: 16px;
+    }
+
+    .service-card h3 {
+        font-size: 1.05rem;
+        margin-top: 12px;
+    }
+
+    .service-card p {
+        font-size: .78rem;
+    }
+
+    .service-number {
+        font-size: .58rem;
+        top: 10px;
+        left: 12px;
+    }
+
+    .booking-form-wrapper {
+        padding: 42px 22px 30px;
+        border-radius: 20px;
+    }
+
+    .booking-form-wrapper.visible {
+        margin-top: 20px;
+    }
+
+    .form-heading {
+        margin-bottom: 30px;
+    }
+
+    .form-heading h2 {
+        font-size: 1.75rem;
+    }
+
+    .form-field {
+        margin-bottom: 19px;
+    }
+
+    .form-field input,
+    .form-field select {
+        padding: 15px;
+        font-size: 1rem;
+        min-height: 52px;
+    }
+
+    .btn-book {
+        min-height: 54px;
+        font-size: .9rem;
+    }
+
+}
+/* =========================================================
+   RÉSERVATION — EXPÉRIENCE PREMIUM
+========================================================= */
+
+.resa {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+/* Introduction */
+
+.booking-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.booking-eyebrow {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.booking-intro p {
+    color: #766c65;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   CARTES DE SOINS
+========================================================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    position: relative;
+    min-height: 170px;
+    padding: 28px 20px;
+    background: #fff;
+    border: 1px solid rgba(36,29,25,.08);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(36,29,25,.06);
+    cursor: pointer;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition:
+        transform .45s var(--ease-premium),
+        box-shadow .45s var(--ease-premium),
+        opacity .45s ease,
+        filter .45s ease,
+        border-color .45s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(36,29,25,.12);
+}
+
+.service-card h3 {
+    margin: 15px 0 8px;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    margin: 0;
+    color: #81766e;
+    font-size: .9rem;
+}
+
+.service-card p span {
+    color: var(--gold);
+}
+
+.service-number {
+    position: absolute;
+    top: 14px;
+    left: 17px;
+
+    font-size: .65rem;
+    letter-spacing: 2px;
+    color: #c7b8aa;
+}
+
+
+/* Carte sélectionnée */
+
+.service-card.active {
+    border-color: var(--terracotta);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(217,122,79,.20);
+}
+
+.service-card.active::after {
+    content: "✓";
+    position: absolute;
+    top: 14px;
+    right: 17px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--terracotta);
+    color: white;
+    border-radius: 50%;
+    font-size: .7rem;
+}
+
+
+/* =========================================================
+   QUAND UN SOIN EST SÉLECTIONNÉ
+========================================================= */
+
+.service-grid.has-selection .service-card:not(.active) {
+    opacity: .30;
+    filter: grayscale(100%);
+    transform: scale(.97);
+}
+
+.service-grid.has-selection .service-card.active {
+    opacity: 1;
+    filter: none;
+}
+
+
+/* =========================================================
+   FORMULAIRE
+========================================================= */
+
+.booking-form-wrapper {
+    position: relative;
+
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 55px 60px 60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff 0%,
+            #fcf8f4 100%
+        );
+
+    border: 1px solid rgba(212,168,106,.22);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(36,29,25,.10),
+        0 2px 8px rgba(36,29,25,.04);
+
+    /* caché au départ */
+    opacity: 0;
+    transform: translateY(35px);
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        opacity .7s var(--ease-premium),
+        transform .7s var(--ease-premium),
+        max-height .8s var(--ease-premium),
+        margin .7s var(--ease-premium);
+}
+
+
+/* formulaire révélé */
+
+.booking-form-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+    margin-top: 20px;
+}
+
+
+/* petite ligne décorative */
+
+.booking-form-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70px;
+    height: 2px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   TITRE FORMULAIRE
+========================================================= */
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.form-heading h2 {
+    margin: 5px 0 12px;
+    font-size: 2.1rem;
+}
+
+.form-selected {
+    display: inline-block;
+
+    margin: 0;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: rgba(217,122,79,.07);
+
+    color: #7b6c62;
+
+    font-size: .85rem;
+}
+
+.form-selected strong {
+    color: var(--terracotta);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CHAMPS
+========================================================= */
+
+.form-field {
+    margin-bottom: 22px;
+}
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+
+    color: #665a52;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 17px;
+
+    background: rgba(255,255,255,.85);
+
+    border: 1px solid rgba(36,29,25,.12);
+    border-radius: 10px;
+
+    color: var(--ink);
+
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+
+    outline: none;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.form-field input::placeholder {
+    color: #b4aaa2;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    background: white;
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 4px rgba(212,168,106,.10);
+}
+
+
+/* =========================================================
+   BOUTON
+========================================================= */
+
+.btn-book {
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 16px 25px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: var(--terracotta);
+    color: white;
+
+    font-family: 'Inter', sans-serif;
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 28px rgba(217,122,79,.25);
+
+    transition:
+        transform .35s var(--ease-premium),
+        box-shadow .35s var(--ease-premium),
+        background .3s ease;
+}
+
+.btn-book span {
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-book:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px rgba(217,122,79,.30);
+}
+
+
+/* =========================================================
+   TEXTE SOUS FORMULAIRE
+========================================================= */
+
+.resa > p {
+    max-width: 700px;
+    margin: 35px auto;
+
+    text-align: center;
+
+    font-size: .82rem;
+    line-height: 1.8;
+
+    color: #8a7d74;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .resa {
+        padding: 65px 18px;
+    }
+
+    .booking-intro {
+        margin-bottom: 30px;
+    }
+
+    .booking-intro p {
+        font-size: .95rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .service-card {
+        min-height: 145px;
+        padding: 25px 12px;
+        border-radius: 16px;
+    }
+
+    .service-card h3 {
+        font-size: 1.05rem;
+        margin-top: 12px;
+    }
+
+    .service-card p {
+        font-size: .78rem;
+    }
+
+    .service-number {
+        font-size: .58rem;
+        top: 10px;
+        left: 12px;
+    }
+
+    .booking-form-wrapper {
+        padding: 42px 22px 30px;
+        border-radius: 20px;
+    }
+
+    .booking-form-wrapper.visible {
+        margin-top: 20px;
+    }
+
+    .form-heading {
+        margin-bottom: 30px;
+    }
+
+    .form-heading h2 {
+        font-size: 1.75rem;
+    }
+
+    .form-field {
+        margin-bottom: 19px;
+    }
+
+    .form-field input,
+    .form-field select {
+        padding: 15px;
+        font-size: 1rem;
+        min-height: 52px;
+    }
+
+    .btn-book {
+        min-height: 54px;
+        font-size: .9rem;
+    }
+
+}
