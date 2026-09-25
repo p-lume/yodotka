@@ -259,37 +259,12 @@ document.addEventListener("DOMContentLoaded", () => {
        
       
 
-        "Vendredi 11 septembre à 10h",
-        "Vendredi 11 septembre à 14h",
-        "Vendredi 11 septembre à 17h",
+      
 
-        "Samedi 12 septembre à 10h",
-        "Samedi 12 septembre à 14h",
-        "Samedi 12 septembre à 17h",
-
-        "Dimanche 13 septembre à 10h",
-        "Dimanche 13 septembre à 14h",
-        "Dimanche 13 septembre à 17h",
-
-        "Samedi 19 septembre à 10h",
-        "Samedi 19 septembre à 14h",
-        "Samedi 19 septembre à 17h",
-
-        "Dimanche 20 septembre à 10h",
-        "Dimanche 20 septembre à 14h",
-        "Dimanche 20 septembre à 17h",
-
-        "jeudi 24 septembre à 14h",
        
-        "Vendredi 25 septembre à 10h",
-        
-        "Samedi 26 septembre à 10h",
-        "Samedi 26 septembre à 14h",
-        "Samedi 26 septembre à 17h",
 
-        "Dimanche 27 septembre à 10h",
-        "Dimanche 27 septembre à 14h",
-        "Dimanche 27 septembre à 17h",
+       
+         "Dimanche 27 septembre à 17h",
 
         "Lundi 28 septembre à 10h",
         "Lundi 28 septembre à 14h",
@@ -301,7 +276,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
         "Dimanche 4 octobre à 10h",
         "Dimanche 4 octobre à 14h",
-        "Dimanche 4 octobre à 17h"
+        "Dimanche 4 octobre à 17h",
+
+       
+        "Samedi 10 octobre à 10h",
+        "samedi 10 octobre à 14h",
+      
+   
+        "Mardi 13 octobre à 10h",
+        "Mardi 13 octobre à 14h",
+        "Mardi 13 octobre à 17h",
+
+              
+        "Samedi 17 octobre à 10h",
+        "Samedi 17 octobre à 17h",
+
+       
+        "Dimanche 18 octobre à 10h",
+        "Dimanche 18 octobre à 14h",
+
+       
+        "Lundi 19 octobre à 10h",
+        "Lundi 19 octobre à 14h",
+        "Lundi 19 octobre à 17h",
+
+       
+        "Dimanche 4 octobre à 10h",
+        "Dimanche 4 octobre à 14h",
+        "Dimanche 4 octobre à 17h",
+
+       
+        "Samedi 24 octobre à 10h",
+        "Samedi 24 octobre à 14h",
+        "Samedi 24 octobre à 17h",
+
+       
+ 
+        "Dimanche 25 octobre à 10h",
+        "Dimanche 25 octobre à 14h",
+        "Dimanche 25 octobre à 17h",
 
     ];
 
