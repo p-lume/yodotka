@@ -258,31 +258,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
        
       
-
-      
-
-       
-
-       
-         "Dimanche 27 septembre à 17h",
-
-        "Lundi 28 septembre à 10h",
-        "Lundi 28 septembre à 14h",
-        "Lundi 28 septembre à 17h",
-
-        "Samedi 3 octobre à 10h",
-        "Samedi 3 octobre à 14h",
-        "Samedi 3 octobre à 17h",
-
-        "Dimanche 4 octobre à 10h",
-        "Dimanche 4 octobre à 14h",
-        "Dimanche 4 octobre à 17h",
-
        
         "Samedi 10 octobre à 10h",
-        "samedi 10 octobre à 14h",
-      
-   
+        
+         
         "Mardi 13 octobre à 10h",
         "Mardi 13 octobre à 14h",
         "Mardi 13 octobre à 17h",
@@ -301,10 +280,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Lundi 19 octobre à 17h",
 
        
-        "Dimanche 4 octobre à 10h",
-        "Dimanche 4 octobre à 14h",
-        "Dimanche 4 octobre à 17h",
-
        
         "Samedi 24 octobre à 10h",
         "Samedi 24 octobre à 14h",
