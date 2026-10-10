@@ -259,10 +259,10 @@ document.addEventListener("DOMContentLoaded", () => {
        
       
        
-        "Samedi 10 octobre à 10h",
+       
         
          
-        "Mardi 13 octobre à 10h",
+        
         "Mardi 13 octobre à 14h",
         "Mardi 13 octobre à 17h",
 
@@ -290,6 +290,82 @@ document.addEventListener("DOMContentLoaded", () => {
         "Dimanche 25 octobre à 10h",
         "Dimanche 25 octobre à 14h",
         "Dimanche 25 octobre à 17h",
+
+       
+        "Samedi 31 octobre à 10h",
+        "Samedi 31 octobre à 14h",
+        "Samedi 31 octobre à 17h",
+
+       
+        "Samedi 07 novembre à 10h",
+        "Samedi 07 novembre à 14h",
+        "Samedi 07 novembre à 17h",
+
+       
+        "jeudi 12 novembre à 10h",
+        "jeudi 12 novembre à 14h",
+        "jeudi 12 novembre à 17h",
+
+       
+        "vendredi 13 novembre à 10h",
+        "vendredi 13 novembre à 14h",
+        
+
+       
+        "Samedi 14 novembre à 10h",
+        "Samedi 14 novembre à 14h",
+        "Samedi 14 novembre à 17h",
+
+       
+
+        "Lundi 16 novembre à 10h",
+        "Lundi 16 novembre à 14h",
+        "Lundi 16 novembre à 17h",
+
+
+       
+        "Mardi 17 novembre à 10h",
+        "Mardi 17 novembre à 14h",
+        
+
+      
+        "Mercredi 18 novembre à 14h",
+        "Mercredi 18 novembre à 17h",
+
+       
+        "Jeudi 19 novembre à 10h",
+        "Jeudi 19 novembre à 14h",
+       "Jeudi 19 novembre à 17h",
+       
+        
+
+        "Vendredi 20 novembre à 10h",
+        "Vendredi 20 novembre à 14h",
+
+       
+        "Samedi 21 novembre à 10h",
+        "Samedi 21 novembre à 14h",
+        "Samedi 21 novembre à 17h",
+
+       
+        "Dimanche 22 novembre à 10h",
+        "Dimanche 22 novembre à 14h",
+        "Dimanche 22 novembre à 17h",
+
+       
+        "Samedi 28 novembre à 10h",
+        "Samedi 28 novembre à 14h",
+        "Samedi 28 novembre à 17h",
+
+       "Dimanche 29 novembre à 10h",
+        "Dimanche 29 novembre à 14h",
+        "Dimanche 29 novembre à 17h",
+
+       
+        
+
+
+       
 
     ];
 
