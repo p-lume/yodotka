@@ -268,10 +268,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
               
         "Samedi 17 octobre à 10h",
-        "Samedi 17 octobre à 17h",
+        
 
        
-        "Dimanche 18 octobre à 10h",
+       
         "Dimanche 18 octobre à 14h",
 
        
