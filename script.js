@@ -297,8 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Mardi 17 novembre à 10h",
         "Mardi 17 novembre à 14h",
         
-      
-        "Mercredi 18 novembre à 14h",
+             
         "Mercredi 18 novembre à 17h",
 
               
