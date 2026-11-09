@@ -262,24 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
          
               
-        
-        "Vendredi 06 novembre à 10h",
-        "Vendredi 06 novembre à 14h",
-        "Vendredi 06 novembre à 17h",
-
        
-        "Samedi 07 novembre à 10h",
-        "Samedi 07 novembre à 14h",
-        "Samedi 07 novembre à 17h",
-
-        "Dimanche 08 novembre à 10h",
-        "Dimanche 08 novembre à 14h",
-        "Dimanche 08 novembre à 17h",
-
-       
-        "Mardi 10 novembre à 10h",
-        "Mardi 10 novembre à 14h",
-        "Mardi 10 novembre à 17h",
 
         "Mercredi 11 novembre à 10h",
         "Mercredi 11 novembre à 14h",
