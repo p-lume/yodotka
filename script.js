@@ -264,17 +264,12 @@ document.addEventListener("DOMContentLoaded", () => {
               
        
 
-        "Mercredi 11 novembre à 10h",
-        "Mercredi 11 novembre à 14h",
-        "Mercredi 11 novembre à 17h",
-       
-        "jeudi 12 novembre à 10h",
        
                      
       
         "Lundi 16 novembre à 10h",
         "Lundi 16 novembre à 14h",
-        "Lundi 16 novembre à 17h",
+      
 
        
         "Mardi 17 novembre à 10h",
