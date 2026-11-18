@@ -268,8 +268,6 @@ document.addEventListener("DOMContentLoaded", () => {
                      
       
         
-             
-        "Mercredi 18 novembre à 17h",
 
               
         "Samedi 21 novembre à 10h",
@@ -287,11 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Lundi 23 novembre à 17h",
 
        
-        "Mardi 24 novembre à 10h",
-        "Mardi 24 novembre à 14h",
-        "Mardi 24 novembre à 17h",
-
-       
         "Samedi 28 novembre à 10h",
         "Samedi 28 novembre à 14h",
         "Samedi 28 novembre à 17h",
@@ -301,9 +294,51 @@ document.addEventListener("DOMContentLoaded", () => {
         "Dimanche 29 novembre à 17h",
 
        
-        
+         "Lundi 30 novembre à 10h",
+        "Lundi 30 novembre à 14h",
+        "Lundi 30 novembre à 17h",
 
 
+        "Mardi 01 décembre à 10h",
+        "Mardi 01 décembre à 14h",
+        "Mardi 01 décembre à 17h",
+
+       
+        "Samedi 05 décembre à 10h",
+        "Samedi 05 décembre à 14h",
+        "Samedi 05 décembre à 17h",
+
+        "Dimanche 06 décembre à 10h",
+        "Dimanche 06 décembre à 14h",
+        "Dimanche 06 décembre à 17h",
+
+       
+        "Lundi 07 décembre à 10h",
+        "Lundi 07 décembre à 14h",
+        "Lundi 07 décembre à 17h",
+
+        "Mardi 08 décembre à 10h",
+        "Mardi 08 décembre à 14h",
+        "Mardi 08 décembre à 17h",
+
+       
+        "Samedi 12 décembre à 10h",
+        "Samedi 12 décembre à 14h",
+        "Samedi 12 décembre à 17h",
+
+        "Dimanche 13 décembre à 10h",
+        "Dimanche 13 décembre à 14h",
+        "Dimanche 13 décembre à 17h",
+
+       
+        "Lundi 14 décembre à 12h",
+        "Lundi 14 décembre à 14h",
+        "Lundi 14 décembre à 17h",
+
+       
+        "Mardi 15 décembre à 10h",
+        "Mardi 15 décembre à 14h",
+        "Mardi 15 décembre à 17h",
        
 
     ];
