@@ -269,9 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
         
 
-              
-        "Samedi 21 novembre à 10h",
-        "Samedi 21 novembre à 14h",
+          
         "Samedi 21 novembre à 17h",
 
        
@@ -304,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Mardi 01 décembre à 17h",
 
        
-        "Samedi 05 décembre à 10h",
+        
         "Samedi 05 décembre à 14h",
         "Samedi 05 décembre à 17h",
 
