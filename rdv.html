@@ -14,57 +14,27 @@
 
 <body>
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- NAVIGATION -->
 
 <nav class="navbar">
 
     <div class="logo">YODOT<span>KA</span></div>
 
-    <!-- MENU ORDINATEUR -->
     <ul class="nav-links">
-
-        <li>
-            <a href="index.html">Accueil</a>
-        </li>
-
-        <li>
-            <a href="shiatsu.html">Shiatsu</a>
-        </li>
-
-        <li>
-            <a href="kobido.html">Kobido</a>
-        </li>
-
-        <li>
-            <a href="yoga.html">Yoga</a>
-        </li>
-
-        <li>
-            <a href="rdv.html" class="active">Prendre RDV</a>
-        </li>
-
-        <li>
-            <a href="aboutme.html">À propos</a>
-        </li>
-
-        <li>
-            <a href="articles.html">Articles</a>
-        </li>
-
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="shiatsu.html">Shiatsu</a></li>
+        <li><a href="kobido.html">Kobido</a></li>
+        <li><a href="yoga.html">Yoga</a></li>
+        <li><a href="rdv.html" class="active">Prendre RDV</a></li>
+        <li><a href="aboutme.html">À propos</a></li>
+        <li><a href="articles.html">Articles</a></li>
     </ul>
 
-
-    <!-- BOUTON BURGER -->
     <div class="menu-toggle" id="menuToggle">
         ☰
     </div>
 
-
-    <!-- MENU SMARTPHONE -->
     <div class="mobile-menu" id="mobileMenu">
-
         <a href="index.html">Accueil</a>
         <a href="shiatsu.html">Shiatsu</a>
         <a href="kobido.html">Kobido</a>
@@ -72,16 +42,11 @@
         <a href="rdv.html">Prendre RDV</a>
         <a href="aboutme.html">À propos</a>
         <a href="articles.html">Articles</a>
-
     </div>
 
 </nav>
 
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -97,18 +62,11 @@
 
 </header>
 
-
-
-<!-- =====================================================
-     SECTION RÉSERVATION
-===================================================== -->
+<!-- SECTION RÉSERVATION -->
 
 <section class="resa">
 
     <h2>Réserver un soin</h2>
-
-
-    <!-- INTRODUCTION -->
 
     <div class="booking-intro">
 
@@ -123,124 +81,58 @@
 
     </div>
 
-
-
-    <!-- =================================================
-         CHOIX DU SOIN
-    ================================================== -->
+    <!-- CHOIX DU SOIN -->
 
     <div class="service-grid" id="serviceGrid">
-
-
-        <!-- KOBIDO EXPRESS -->
 
         <div
             class="service-card"
             data-value="kobido_30"
             tabindex="0"
         >
-
-            <span class="service-number">
-                01
-            </span>
-
-            <h3>
-                Kobido express
-            </h3>
-
-            <p>
-                30 min <span>—</span> 50 €
-            </p>
-
+            <span class="service-number">01</span>
+            <h3>Kobido express</h3>
+            <p>30 min <span>—</span> 50 €</p>
         </div>
-
-
-
-        <!-- KOBIDO -->
 
         <div
             class="service-card"
             data-value="kobido_60"
             tabindex="0"
         >
-
-            <span class="service-number">
-                02
-            </span>
-
-            <h3>
-                Kobido
-            </h3>
-
-            <p>
-                60 min <span>—</span> 70 €
-            </p>
-
+            <span class="service-number">02</span>
+            <h3>Kobido</h3>
+            <p>60 min <span>—</span> 70 €</p>
         </div>
-
-
-
-        <!-- SHIATSU -->
 
         <div
             class="service-card"
             data-value="shiatsu_75"
             tabindex="0"
         >
-
-            <span class="service-number">
-                03
-            </span>
-
-            <h3>
-                Shiatsu
-            </h3>
-
-            <p>
-                75 min <span>—</span> 80 €
-            </p>
-
+            <span class="service-number">03</span>
+            <h3>Shiatsu</h3>
+            <p>75 min <span>—</span> 80 €</p>
         </div>
-
-
-
-        <!-- YOGA -->
 
         <div
             class="service-card"
             data-value="yoga_60"
             tabindex="0"
         >
-
-            <span class="service-number">
-                04
-            </span>
-
-            <h3>
-                Yoga
-            </h3>
-
-            <p>
-                Sur demande
-            </p>
-
+            <span class="service-number">04</span>
+            <h3>Yoga</h3>
+            <p>Sur demande</p>
         </div>
 
     </div>
 
-
-
-    <!-- =================================================
-         FORMULAIRE
-    ================================================== -->
+    <!-- FORMULAIRE -->
 
     <div
         class="booking-form-wrapper"
         id="bookingFormWrapper"
     >
-
-
-        <!-- TITRE DU FORMULAIRE -->
 
         <div class="form-heading">
 
@@ -253,18 +145,11 @@
             </h2>
 
             <p class="form-selected">
-
                 Votre sélection :
-
-                <strong id="selectedService">
-                    —
-                </strong>
-
+                <strong id="selectedService">—</strong>
             </p>
 
         </div>
-
-
 
         <!-- FORMULAIRE FORMSUBMIT -->
 
@@ -272,8 +157,8 @@
             id="rdvForm"
             action="https://formsubmit.co/e8beb611dfc227ee5c1436d852224d18"
             method="POST"
+            accept-charset="UTF-8"
         >
-
 
             <!-- CONFIGURATION FORMSUBMIT -->
 
@@ -283,11 +168,7 @@
                 value="Nouvelle réservation YODOTKA"
             >
 
-            <input
-                type="hidden"
-                name="_captcha"
-                value="false"
-            >
+            <!-- CAPTCHA ACTIF PAR DÉFAUT -->
 
             <input
                 type="hidden"
@@ -295,6 +176,16 @@
                 value="table"
             >
 
+            <!-- PROTECTION ANTI-SPAM -->
+
+            <input
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position:absolute;left:-9999px;width:1px;height:1px;"
+            >
 
             <!-- PAGE APRÈS ENVOI -->
 
@@ -304,7 +195,6 @@
                 value="https://yodotka.fr/merci.html"
             >
 
-
             <!-- EMAIL AUTOMATIQUE AU CLIENT -->
 
             <input
@@ -312,7 +202,6 @@
                 name="_autoresponse"
                 value="Merci d'avoir réservé chez YODOTKA. Votre demande a bien été reçue. Nous vous recontacterons sous 24 heures afin de confirmer votre créneau."
             >
-
 
             <!-- SOIN SÉLECTIONNÉ -->
 
@@ -322,17 +211,11 @@
                 id="service"
             >
 
-
-
-            <!-- =========================================
-                 NOM
-            ========================================== -->
+            <!-- NOM -->
 
             <div class="form-field">
 
-                <label for="nom">
-                    Nom
-                </label>
+                <label for="nom">Nom</label>
 
                 <input
                     type="text"
@@ -345,17 +228,11 @@
 
             </div>
 
-
-
-            <!-- =========================================
-                 PRÉNOM
-            ========================================== -->
+            <!-- PRÉNOM -->
 
             <div class="form-field">
 
-                <label for="prenom">
-                    Prénom
-                </label>
+                <label for="prenom">Prénom</label>
 
                 <input
                     type="text"
@@ -368,11 +245,7 @@
 
             </div>
 
-
-
-            <!-- =========================================
-                 EMAIL
-            ========================================== -->
+            <!-- EMAIL -->
 
             <div class="form-field">
 
@@ -383,7 +256,7 @@
                 <input
                     type="email"
                     id="email"
-                    name="Email du client"
+                    name="email"
                     placeholder="votre@email.com"
                     autocomplete="email"
                     required
@@ -391,11 +264,7 @@
 
             </div>
 
-
-
-            <!-- =========================================
-                 DATE
-            ========================================== -->
+            <!-- DATE -->
 
             <div class="form-field">
 
@@ -417,11 +286,7 @@
 
             </div>
 
-
-
-            <!-- =========================================
-                 BOUTON
-            ========================================== -->
+            <!-- BOUTON -->
 
             <button
                 type="submit"
@@ -430,22 +295,15 @@
 
                 Confirmer ma demande
 
-                <span>
-                    →
-                </span>
+                <span>→</span>
 
             </button>
-
 
         </form>
 
     </div>
 
-
-
-    <!-- =================================================
-         INFORMATIONS
-    ================================================== -->
+    <!-- INFORMATIONS -->
 
     <p class="booking-information">
 
@@ -467,11 +325,7 @@
 
     </p>
 
-
-
-    <!-- =================================================
-         RÉSERVATION PAR SMS
-    ================================================== -->
+    <!-- RÉSERVATION PAR SMS -->
 
     <div class="sms-rdv">
 
@@ -479,16 +333,12 @@
             Vous préférez réserver directement ?
         </p>
 
-
         <a
             href="sms:+33651471750"
             class="btn-sms"
         >
-
             📱 Prendre RDV par SMS
-
         </a>
-
 
         <span>
             06 51 47 17 50
@@ -496,27 +346,19 @@
 
     </div>
 
-
 </section>
 
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer class="footer">
 
     <div class="footer-container">
 
-
         <!-- COLONNE 1 -->
 
         <div class="footer-col">
 
-            <h4>
-                YODOTKA
-            </h4>
+            <h4>YODOTKA</h4>
 
             <p>
                 Bien-être, shiatsu, kobido, yoga et pratiques
@@ -525,67 +367,30 @@
 
         </div>
 
-
-
         <!-- COLONNE 2 -->
 
         <div class="footer-col">
 
-            <h4>
-                Navigation
-            </h4>
+            <h4>Navigation</h4>
 
             <ul>
 
-                <li>
-                    <a href="index.html">
-                        Accueil
-                    </a>
-                </li>
-
-                <li>
-                    <a href="shiatsu.html">
-                        Shiatsu
-                    </a>
-                </li>
-
-                <li>
-                    <a href="kobido.html">
-                        Kobido
-                    </a>
-                </li>
-
-                <li>
-                    <a href="yoga.html">
-                        Yoga
-                    </a>
-                </li>
-
-                <li>
-                    <a href="aboutme.html">
-                        À propos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="rdv.html">
-                        Prendre RDV
-                    </a>
-                </li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shiatsu.html">Shiatsu</a></li>
+                <li><a href="kobido.html">Kobido</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="aboutme.html">À propos</a></li>
+                <li><a href="rdv.html">Prendre RDV</a></li>
 
             </ul>
 
         </div>
 
-
-
         <!-- COLONNE 3 -->
 
         <div class="footer-col">
 
-            <h4>
-                Contact
-            </h4>
+            <h4>Contact</h4>
 
             <p>
                 35 rue Guy le Rouge<br>
@@ -602,10 +407,7 @@
 
         </div>
 
-
     </div>
-
-
 
     <!-- COPYRIGHT -->
 
@@ -631,11 +433,7 @@
 
 </footer>
 
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
